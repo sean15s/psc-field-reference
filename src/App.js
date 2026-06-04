@@ -92,8 +92,6 @@ const PSC_DATA = [
       ]},
     ],
   },
-
-  // ─── HOT ROLLED CARBON STEEL ──────────────────────────────────────────────
   {
     id: "hr-rounds",
     category: "Hot Rolled Carbon / Alloy Steel",
@@ -101,7 +99,7 @@ const PSC_DATA = [
     grades: ["1018","1045","1141","1117","8620","4140 Annealed","4140 HT","4340"],
     sizes: "2\" through 22\" diameter",
     finishes: ["As-rolled","Annealed","Heat-Treated"],
-    notes: "Full range of low carbon and alloy. Large diameter specialty.",
+    notes: "Full range of low carbon and alloy. Large diameter specialty. Confirm availability on diameters above 18\" with your branch.",
     uses: [
       { label: "Large shafts, axles, rolls", grades: [
         { grade: "1045", why: "Medium carbon — through-hardenable, good strength-to-cost ratio for large diameter shafts" },
@@ -187,8 +185,6 @@ const PSC_DATA = [
       ]},
     ],
   },
-
-  // ─── CARBON STEEL TUBE ────────────────────────────────────────────────────
   {
     id: "tube-structural",
     category: "Carbon Steel Tube",
@@ -264,8 +260,6 @@ const PSC_DATA = [
       ]},
     ],
   },
-
-  // ─── STAINLESS STEEL ──────────────────────────────────────────────────────
   {
     id: "ss-rounds",
     category: "Stainless Steel",
@@ -290,10 +284,6 @@ const PSC_DATA = [
       { label: "High strength, precipitation hardened (aerospace, medical)", grades: [
         { grade: "17-4PH", why: "Precipitation hardened — combines stainless corrosion resistance with alloy steel strength levels, heat treatable" },
       ]},
-      { label: "Low carbon / weld-critical applications", grades: [
-        { grade: "304L", why: "Low carbon prevents sensitization at weld heat affected zone — required for welded assemblies in corrosive service" },
-        { grade: "316L", why: "Same benefit as 304L but with added molybdenum for chloride resistance — best for welded marine/chemical parts" },
-      ]},
     ],
   },
   {
@@ -303,13 +293,10 @@ const PSC_DATA = [
     grades: ["303"],
     sizes: ".374\", .499\", .624\", .749\", .999\", 1.249\", 1.374\", 1.499\", 1.999\"",
     finishes: ["Cold Drawn","Turned Ground & Polished"],
-    notes: "Held to extremely tight diameter tolerances specifically for precision screw machine work. Eliminates first-pass cleanup — load and run.",
+    notes: "Held to extremely tight diameter tolerances specifically for precision screw machine work.",
     uses: [
       { label: "Precision screw machine production", grades: [
-        { grade: "303", why: "Best machining stainless — sulfur addition gives carbon-steel-like chip breaking and tool life, accuracy sizes eliminate setup cleanup cuts" },
-      ]},
-      { label: "High-volume turned stainless components", grades: [
-        { grade: "303", why: "Tight OD tolerance means consistent bar-to-bar diameter — critical for screw machine shops running high volume with minimal operator intervention" },
+        { grade: "303", why: "Best machining stainless — accuracy sizes eliminate setup cleanup cuts, load and run" },
       ]},
     ],
   },
@@ -385,7 +372,7 @@ const PSC_DATA = [
     category: "Stainless Steel",
     type: "Tubing & Pipe",
     grades: ["304"],
-    sizes: "Round: 1/4\" OD×.035\" wall – 1-1/2\" OD×.120\" wall. Square: 3/4\"×1/8\" wall – 4\"×1/4\" wall. Rect: 3/4\"×1-1/2\"×.065\" – 2\"×4\"×1/4\" wall. Pipe: 1/4\" IPS Sch.40 – 6\" IPS Sch.40",
+    sizes: "Round: 1/4\" OD×.035\" wall – 1-1/2\" OD×.120\" wall. Square/Rect tubing. Pipe: 1/4\" IPS Sch.40 – 6\" IPS Sch.40",
     finishes: ["Mill","180 Grit Polished"],
     notes: "Polished finish available for aesthetic/sanitary applications.",
     uses: [
@@ -394,9 +381,6 @@ const PSC_DATA = [
       ]},
       { label: "Architectural / decorative", grades: [
         { grade: "304", why: "180 grit polished finish provides clean aesthetic appearance for visible architectural applications" },
-      ]},
-      { label: "General corrosion-resistant fluid transfer", grades: [
-        { grade: "304", why: "Resists rust and most chemicals — eliminates corrosion maintenance issues of carbon steel pipe" },
       ]},
     ],
   },
@@ -417,8 +401,6 @@ const PSC_DATA = [
       ]},
     ],
   },
-
-  // ─── ALUMINUM ─────────────────────────────────────────────────────────────
   {
     id: "al-6061-bars",
     category: "Aluminum",
@@ -441,7 +423,7 @@ const PSC_DATA = [
     category: "Aluminum",
     type: "6061 Extruded Shapes",
     grades: ["6061-T6"],
-    sizes: "Angles: 1\"×1\"×1/8\" – 4\"×4\"×3/8\" (equal & unequal). American Std Channels: 3\"×.170\" – 12\"×.300\". AA Channels: 2\"×.130\" – 12\"×.350\"",
+    sizes: "Angles: 1\"×1\"×1/8\" – 4\"×4\"×3/8\". American Std Channels: 3\"–12\". AA Channels: 2\"–12\"",
     finishes: ["Extruded"],
     notes: "",
     uses: [
@@ -461,9 +443,6 @@ const PSC_DATA = [
     uses: [
       { label: "Architectural, window frames, decorative trim", grades: [
         { grade: "6063-T5/T6", why: "Smoother surface finish than 6061 — anodizes with better appearance, standard for architectural extrusions" },
-      ]},
-      { label: "Anodized components", grades: [
-        { grade: "6063-T5/T6", why: "Lower silicon content produces clearer, more uniform anodize than 6061 — preferred when color consistency matters" },
       ]},
     ],
   },
@@ -486,7 +465,7 @@ const PSC_DATA = [
     category: "Aluminum",
     type: "6061 Pipe",
     grades: ["6061-T6"],
-    sizes: "3/4\" IPS Sch. 40 through 4\" IPS Sch. 40 (also listed as 1/2\" IPS Sch. 40 through 6\" IPS Sch. 40 in some branches — confirm with your branch for exact availability)",
+    sizes: "1/2\" IPS Sch. 40 through 6\" IPS Sch. 40 (confirm with branch for exact availability)",
     finishes: ["Extruded"],
     notes: "Size range varies by branch. Confirm availability with your location.",
     uses: [
@@ -499,7 +478,7 @@ const PSC_DATA = [
     id: "al-plate",
     category: "Aluminum",
     type: "Plate",
-    grades: ["6061","7075","Tool & Jig"],
+    grades: ["6061","7075","2024","Tool & Jig"],
     sizes: "1/2\" through 12\" thick",
     finishes: ["Saw cut"],
     notes: "Precision plate sawing and circle cutting available.",
@@ -509,6 +488,7 @@ const PSC_DATA = [
       ]},
       { label: "High-strength aerospace / defense", grades: [
         { grade: "7075", why: "Zinc alloy — highest strength aluminum available, 73 ksi yield in T6, used where 6061 isn't strong enough" },
+        { grade: "2024", why: "Copper alloy aluminum — very high strength with excellent fatigue resistance, standard aerospace structural grade" },
       ]},
       { label: "Mold bases, jigs, fixtures", grades: [
         { grade: "Tool & Jig", why: "Stress relieved and precision ground — holds tight flatness tolerances, eliminates warping during machining of large plates" },
@@ -552,8 +532,6 @@ const PSC_DATA = [
       ]},
     ],
   },
-
-  // ─── TOOL STEEL ───────────────────────────────────────────────────────────
   {
     id: "tool-air",
     category: "Tool Steel",
@@ -593,7 +571,7 @@ const PSC_DATA = [
     grades: ["S1","S5","S7"],
     sizes: "Rounds, Flats. Drill Rod available in S7.",
     finishes: ["DeCarb-Free","Rough Turned","Precision Ground","Oversize"],
-    notes: "High toughness, impact resistant. Good for interrupted cuts.",
+    notes: "High toughness, impact resistant.",
     uses: [
       { label: "Chisels, punches, jackhammer bits, swaging dies", grades: [
         { grade: "S1", why: "Tungsten alloy — very tough, resists shock loading, good for heavy impact tools that see repeated blows" },
@@ -648,7 +626,7 @@ const PSC_DATA = [
     uses: [
       { label: "Punches, dies, gauges, taps (general toolroom)", grades: [
         { grade: "O1", why: "The most widely used tool steel — predictable heat treat, good wear resistance, economical, the default toolroom steel" },
-        { grade: "O2", why: "Slightly different alloy than O1 — similar performance, sometimes preferred for specific heat treat characteristics" },
+        { grade: "O2", why: "Similar performance to O1, sometimes preferred for specific heat treat characteristics" },
       ]},
       { label: "Graphitic, free-machining, threading tools", grades: [
         { grade: "O6", why: "Graphitic oil hardening steel — self-lubricating during machining, excellent for taps and threading tools" },
@@ -734,13 +712,11 @@ const PSC_DATA = [
       ]},
     ],
   },
-
-  // ─── SPECIALTY ────────────────────────────────────────────────────────────
   {
     id: "specialty",
     category: "Specialty Products",
     type: "Specialty & Non-Ferrous",
-    grades: ["Expanded Metal","Bar Grating","Grip Strut","Brass","Copper"],
+    grades: ["Expanded Metal","Bar Grating","Grip Strut","Perforated Metal","Wire Cloth","Fiberglass Grating","Brass","Copper"],
     sizes: "Various — contact branch for availability",
     finishes: ["Standard"],
     notes: "",
@@ -749,6 +725,11 @@ const PSC_DATA = [
         { grade: "Bar Grating", why: "Open design drains liquids and debris, strong load capacity, standard for industrial mezzanines and platforms" },
         { grade: "Grip Strut", why: "Serrated plank with openings — aggressive anti-slip surface for ramps and walkways in wet or oily conditions" },
         { grade: "Expanded Metal", why: "Single piece construction, no welds — lighter than grating, good for guards, screens, and light-duty flooring" },
+        { grade: "Fiberglass Grating", why: "Non-conductive, non-corrosive, lightweight — ideal for chemical plants, water treatment, and electrical environments where steel would rust or conduct" },
+      ]},
+      { label: "Filtration, screening, venting", grades: [
+        { grade: "Wire Cloth", why: "Woven wire mesh — used for filtration, screening, and ventilation where precise opening size matters" },
+        { grade: "Perforated Metal", why: "Sheet with punched holes in a uniform pattern — used for guards, filters, screens, and decorative panels" },
       ]},
       { label: "Electrical, plumbing, machined fittings", grades: [
         { grade: "Brass", why: "Excellent machinability, corrosion resistant, non-sparking — standard for valves, fittings, and electrical components" },
@@ -758,10 +739,75 @@ const PSC_DATA = [
   },
 ];
 
+const PSC_SERVICES = [
+  {
+    id: "bar-sawing",
+    type: "Bar Sawing",
+    description: "Precision CNC cold saw cutting — economical and accurate.",
+    details: "Provides machine shop quality surfaces with extremely close tolerances on high production cutting jobs. Standard saw cutting available on all products in all quantities. Band sawing also available for larger sections and general cutting.",
+    capacity: "Single piece or precision production cutting. All bar, tube, and structural products.",
+    bestFor: ["Screw machine shops", "High production runs", "Close tolerance cut lengths", "All bar and tube products"],
+    notes: "Band sawing available for larger sections. Cold sawing produces the cleanest, squarest cut.",
+  },
+  {
+    id: "alum-plate-sawing",
+    type: "Aluminum Plate Sawing",
+    description: "Saw cutting through 12\" thick aluminum plate — close tolerance precision cutting available.",
+    details: "Handles the full range of aluminum plate stock up to 12\" thick. Close tolerance precision saw cutting available on all quantities. Circle sawing also available for round blanks, discs, and flanges.",
+    capacity: "Aluminum plate up to 12\" thick. All grades: 6061, 7075, Tool & Jig.",
+    bestFor: ["Aluminum plate blanks", "Precision plate components", "Circle / disc cutting", "Thick plate applications"],
+    notes: "Circle sawing available. Precision tolerance cutting available on request.",
+  },
+  {
+    id: "plate-burning",
+    type: "Plate Burning",
+    description: "CNC plasma and oxy fuel cutting — custom parts up to 8\" thick, tight dimensional tolerances.",
+    details: "Flame cutting using both oxy-acetylene and plasma processes. Produces custom shapes and parts from plate with tight dimensional tolerances. CNC controlled for repeatable accuracy.",
+    capacity: "Carbon steel plate up to 8\" thick. Plasma for stainless and aluminum. Oxy fuel for heavy carbon steel.",
+    bestFor: ["Custom shapes from plate", "Carbon steel plate parts", "Structural components", "Heavy plate up to 8\" thick"],
+    notes: "Oxy fuel best for thick carbon steel. Plasma for faster cutting, cleaner edge, works on stainless and aluminum.",
+  },
+  {
+    id: "shearing",
+    type: "Shearing",
+    description: "Clean straight cuts in sheet metal — up to 3/8\" stainless, 1/2\" carbon and aluminum.",
+    details: "Produces clean, straight cuts on sheet material. Fast and economical for straight-line blanking. Best suited for sheet and thin plate applications where a flat, straight cut is required.",
+    capacity: "3/8\" max for stainless. 1/2\" max for carbon steel and aluminum.",
+    bestFor: ["Carbon steel sheet", "Aluminum sheet", "Stainless sheet", "Flat blanks and strip"],
+    notes: "For thicker material or custom shapes, use plate burning. Shearing is fastest and most economical for sheet.",
+  },
+  {
+    id: "custom-extrusions",
+    type: "Custom Extrusions",
+    description: "Aluminum extruded to customer specs — saves machining costs and reduces scrap.",
+    details: "Aluminum can be extruded in an infinite number of custom designed cross-sections. Designed to exact customer specifications. Eliminates the need to machine a complex profile from solid bar — you get exactly the shape you need, ready to cut to length.",
+    capacity: "Aluminum alloys. Custom profiles to customer drawings. Volume applications.",
+    bestFor: ["Custom aluminum profiles", "High volume repeat parts", "Complex cross-sections", "Cost reduction vs. machining from solid"],
+    notes: "Requires tooling setup. Best suited for volume applications where tooling cost is justified by piece count.",
+  },
+  {
+    id: "stocking-programs",
+    type: "Stocking Programs",
+    description: "Dedicated inventory programs for high volume or non-standard items.",
+    details: "PSC will maintain dedicated inventory for customers with consistent or high-volume demand. Includes non-standard items, custom sizes, and JIT (Just-In-Time) delivery programs. Locks in availability and price for the customer, secures committed volume for PSC.",
+    capacity: "Any product line. Custom sizes and non-standard items. Blanket orders and JIT programs.",
+    bestFor: ["High volume buyers", "Non-standard sizes", "JIT delivery requirements", "Customers with predictable demand"],
+    notes: "Contact your branch to discuss a stocking program. Works best with 3–6 month volume commitments.",
+  },
+  {
+    id: "delivery",
+    type: "Delivery",
+    description: "Every location has its own fleet. Next day delivery is standard. Same day pickup available.",
+    details: "Each of PSC's 11 regional warehouses operates its own fleet of PSC trucks driven by PSC employees — not a third party carrier. Next day delivery is the standard expectation, not the exception. Same day pickup is available at all branch locations.",
+    capacity: "All 11 locations. Regional delivery area from each branch. Same day pickup at all locations.",
+    bestFor: ["All customers in service area", "Time-sensitive orders", "JIT programs", "Large or heavy material that can't ship UPS"],
+    notes: "PSC drivers, PSC trucks — not a freight carrier. Next day is standard. Same day pickup available at all branches.",
+  },
+];
+
 const CATEGORIES = ["All", ...Array.from(new Set(PSC_DATA.map(d => d.category)))];
 
 const GLOSSARY = [
-  // ─── LINE CARD ABBREVIATIONS ──────────────────────────────────────────────
   { term: "TGP", category: "Abbreviations", definition: "Turned, Ground & Polished. The bar is rough turned on a lathe, then centerless ground to tight diameter tolerance, then polished. Gives the best surface finish and tightest tolerance of any cold finished product. What a customer means when they say they need 'clean, tight bar.'" },
   { term: "T&P", category: "Abbreviations", definition: "Turned & Polished. Turned on a lathe and polished but not ground — looser tolerance than TGP. Step below TGP in finish quality and cost." },
   { term: "C/F", category: "Abbreviations", definition: "Cold Finished. Steel that has been processed at room temperature (cold drawn, turned, ground) to tighten dimensions and improve surface finish vs hot rolled. Better tolerance, better surface, higher strength than HR." },
@@ -782,25 +828,14 @@ const GLOSSARY = [
   { term: "HSLA", category: "Abbreviations", definition: "High Strength Low Alloy. Steel with small amounts of alloying elements (niobium, vanadium, titanium) that boost strength without requiring heat treatment. Higher yield than standard carbon steel, better weldability than heat treated alloy steel." },
   { term: "ASTM", category: "Abbreviations", definition: "American Society for Testing and Materials. The organization that writes the material specifications (A36, A500, A513, etc.) that define minimum mechanical properties, chemistry, and testing requirements. When a customer asks for 'ASTM certified' they want material tested to that spec." },
   { term: "AMS", category: "Abbreviations", definition: "Aerospace Material Specification. Higher-tier spec than ASTM — tighter chemistry, tighter testing, full traceability required. When you see AMS on an order (like 4340 AMS6415) it's aerospace or defense and paperwork is critical." },
-  { term: "PM", category: "Abbreviations", definition: "Powder Metallurgy. Steel made by compacting and sintering metal powder rather than casting. Produces extremely uniform carbide distribution — better wear resistance and toughness than conventionally cast tool steel of the same grade." },
-  { term: "CPM", category: "Abbreviations", definition: "Crucible Particle Metallurgy. Crucible Industries' brand name for their powder metallurgy tool steel process. CPM grades (CPM S30V, CPM Rex, etc.) are premium PM tool steels with exceptional wear resistance and toughness." },
-  { term: "RoHS", category: "Abbreviations", definition: "Restriction of Hazardous Substances. EU directive restricting certain materials (including lead) in electronic equipment. When a customer asks for 'RoHS compliant' aluminum (like 2011-T3) they need the version without restricted substances — important for electronics and medical applications." },
-  { term: "DFARS", category: "Abbreviations", definition: "Defense Federal Acquisition Regulation Supplement. Requires that steel and other metals used in US defense contracts be melted and manufactured in the US or certain allied countries. When a customer asks if material is 'DFARS compliant' they're on a government/defense job." },
-  { term: "Sch. 40", category: "Abbreviations", definition: "Schedule 40. A pipe wall thickness designation — Schedule refers to the wall thickness relative to the pipe size. Sch. 40 is the most common standard wall. Higher schedule = thicker wall = more pressure capacity." },
-
-  // ─── DOCUMENT / ORDER TERMS ───────────────────────────────────────────────
-  { term: "Mill Cert / MTR", category: "Documents & Orders", definition: "Mill Certification / Material Test Report. The document from the steel mill that certifies the chemistry and mechanical properties of a specific heat of material. Customers on aerospace, defense, pressure vessel, or food/pharma jobs will always ask for certs. PSC maintains traceability so we can provide these." },
+  { term: "DFARS", category: "Abbreviations", definition: "Defense Federal Acquisition Regulation Supplement. Requires that steel used in US defense contracts be melted and manufactured in the US or certain allied countries. When a customer asks if material is 'DFARS compliant' they're on a government/defense job." },
+  { term: "Sch. 40", category: "Abbreviations", definition: "Schedule 40. A pipe wall thickness designation. Sch. 40 is the most common standard wall. Higher schedule = thicker wall = more pressure capacity." },
+  { term: "Mill Cert / MTR", category: "Documents & Orders", definition: "Mill Certification / Material Test Report. The document from the steel mill that certifies the chemistry and mechanical properties of a specific heat of material. Customers on aerospace, defense, pressure vessel, or food/pharma jobs will always ask for certs." },
   { term: "Heat Number", category: "Documents & Orders", definition: "The unique identification number assigned to a specific melt of steel at the mill. The heat number ties the material to the mill cert. When a customer asks to 'keep the heat numbers' they want the cert documentation matched to the specific bars they received." },
-  { term: "Cert to Print", category: "Documents & Orders", definition: "Certified to the customer's drawing or specification. They want documentation proving the material meets their specific requirements, not just the standard spec." },
   { term: "RFQ", category: "Documents & Orders", definition: "Request for Quote. When a customer sends an RFQ they want pricing — not an order, just a price. Respond fast. Speed on an RFQ is one of the biggest competitive advantages in this business." },
   { term: "PO", category: "Documents & Orders", definition: "Purchase Order. The formal document a customer issues when they're actually buying. Don't ship without a PO number. The PO is the contract." },
-  { term: "Lead Time", category: "Documents & Orders", definition: "How long until the customer gets their material. PSC's next-day delivery capability is a major selling point — most competitors can't match it. When a customer is in a bind, lead time wins the order." },
-  { term: "Will Call / Pickup", category: "Documents & Orders", definition: "Customer comes to the branch to pick up their material rather than having it delivered. Good for urgent same-day needs. Know your branch's pickup hours and dock capabilities." },
-  { term: "JIT", category: "Documents & Orders", definition: "Just In Time. A stocking program where PSC holds inventory at the branch specifically for one customer, releasing it to them on their production schedule. Locks in the customer, reduces their carrying cost, good for both sides." },
   { term: "Blanket Order", category: "Documents & Orders", definition: "A standing order for a set quantity over a period of time, released in smaller shipments. Customer commits to buying X tons over 6 months, you commit to holding the inventory. Good for locking in price and securing volume." },
   { term: "Stocking Program", category: "Documents & Orders", definition: "PSC holds agreed-upon inventory of specific sizes and grades for a customer at all times. Customer gets guaranteed availability, PSC gets committed volume. One of PSC's core service offerings." },
-
-  // ─── PROCESSING / FABRICATION ─────────────────────────────────────────────
   { term: "Saw Cutting", category: "Processing", definition: "Cutting bar, tube, or plate to a specific length using a band saw or cold saw. PSC offers both single-piece cutting and precision production cutting (high volume, tight length tolerance). A major value-add over buying from a mill." },
   { term: "Band Saw", category: "Processing", definition: "Uses a continuous toothed blade — good for general cutting across most materials. Slightly rougher cut than cold saw but handles a wider range of sizes and materials." },
   { term: "Cold Saw", category: "Processing", definition: "Uses a circular blade at slow speed — produces a very clean, burr-free, square cut with tight length tolerance. Preferred for precision production cutting where finish and squareness matter." },
@@ -809,49 +844,53 @@ const GLOSSARY = [
   { term: "Shearing", category: "Processing", definition: "Cutting sheet or thin plate using a shear blade — like giant scissors. Fast and economical for straight cuts on sheet. Can't cut thick plate or profiles." },
   { term: "Circle Cutting", category: "Processing", definition: "Cutting round blanks (discs) from plate using a plasma or flame cutter on a rotary arm. PSC offers aluminum plate circle cutting — common for flanges, discs, and round blanks." },
   { term: "Deburring", category: "Processing", definition: "Removing the sharp edge or burr left after cutting. A customer who asks for 'deburred' parts wants the sharp edges knocked off so they're safe to handle and won't cause interference on assembly." },
-  { term: "Squareness", category: "Processing", definition: "How close to 90 degrees the cut end is relative to the bar or tube axis. A 'square cut' matters when the end is a mating surface. Cold sawing produces better squareness than band sawing." },
-  { term: "Facing", category: "Processing", definition: "Machining the end of a bar flat and square on a lathe. Customer may ask for 'faced and centered' when they need very precise end condition for a machining setup." },
-
-  // ─── MATERIAL / METALLURGY TERMS ─────────────────────────────────────────
+  { term: "Galvanized", category: "Metallurgy", definition: "Steel coated with zinc for corrosion protection. The zinc acts as a sacrificial coating — it corrodes before the steel does. Applied by hot-dip galvanizing (HDG) for structural material or continuous galvanizing lines for sheet. Standard for outdoor structural applications and sheet metal exposed to weather." },
+  { term: "Galvanneal", category: "Metallurgy", definition: "A step beyond galvanized — after the hot-dip zinc coating is applied, the material is immediately annealed in a furnace. This diffuses the zinc into the steel surface, creating a zinc-iron alloy coating. Galvanneal has a matte grey appearance vs. the spangled shine of standard galvanized. It paints better, welds better, and is the standard for automotive and appliance applications where a painted finish is required." },
   { term: "Annealed", category: "Metallurgy", definition: "Heat treated to soften the material — makes it easier to machine, form, or cold work. When you see '4140 Annealed' it means it hasn't been hardened yet. Customer will machine it in this soft state, then heat treat to final hardness." },
-  { term: "Heat Treated / HT", category: "Metallurgy", definition: "The material has been hardened and tempered to a specified hardness range. '4140 HT' means it's already at its final hardness — ready to use without further heat treat. Common for structural and mechanical applications." },
+  { term: "Heat Treated / HT", category: "Metallurgy", definition: "The material has been hardened and tempered to a specified hardness range. '4140 HT' means it's already at its final hardness — ready to use without further heat treat." },
   { term: "Pre-Hardened", category: "Metallurgy", definition: "Same as heat treated — the mill or service center has already done the heat treatment. Customer gets it ready to machine to final dimensions. Saves them the cost and lead time of sending out for heat treat." },
   { term: "Carburizing / Case Hardening", category: "Metallurgy", definition: "A heat treatment process where carbon is diffused into the surface of low-carbon steel, creating a hard outer case with a tough ductile core. Common for gears, pins, cams. Why grades like 8620 and 1018 are used — they case harden well." },
   { term: "Quench & Temper", category: "Metallurgy", definition: "The standard heat treatment sequence for alloy steel — heat to austenitizing temperature, quench (rapid cool in oil or water) to harden, then temper (reheat to lower temperature) to reduce brittleness. What '4140 HT' has been through." },
-  { term: "Stress Relieving", category: "Metallurgy", definition: "Heating material to a moderate temperature (below hardening temp) and slow cooling to reduce internal stresses from machining or welding. Customer may ask for stress relieved material when they're doing heavy machining and can't afford distortion." },
   { term: "Machinability", category: "Metallurgy", definition: "How easily a material can be cut, drilled, and machined. Rated as a percentage vs 1212 free machining steel (100%). 12L14 rates around 170% — cuts faster and cleaner than the baseline. 4140 HT rates around 55% — much harder to machine." },
-  { term: "Tensile Strength", category: "Metallurgy", definition: "The maximum stress a material can withstand before breaking — measured in PSI or KSI (thousands of PSI). 1018 cold drawn: ~70 KSI. 4140 HT: ~150 KSI. 4340 HT: ~180+ KSI. Higher tensile = stronger but usually harder to machine." },
-  { term: "Yield Strength", category: "Metallurgy", definition: "The stress at which a material starts to permanently deform (bend and not spring back). Engineers design to yield strength, not tensile. A36 structural: 36 KSI yield. 4140 HT: ~130 KSI yield. Important number when a customer asks about load capacity." },
-  { term: "Elongation", category: "Metallurgy", definition: "How much a material can stretch before breaking — expressed as a percentage. High elongation = ductile, can bend without cracking. Low elongation = brittle. Important for formed parts — a material with 2% elongation will crack where one with 20% won't." },
+  { term: "Tensile Strength", category: "Metallurgy", definition: "The maximum stress a material can withstand before breaking — measured in PSI or KSI. 1018 cold drawn: ~70 KSI. 4140 HT: ~150 KSI. 4340 HT: ~180+ KSI. Higher tensile = stronger but usually harder to machine." },
+  { term: "Yield Strength", category: "Metallurgy", definition: "The stress at which a material starts to permanently deform. A36 structural: 36 KSI yield. 4140 HT: ~130 KSI yield. Important number when a customer asks about load capacity." },
   { term: "Decarburization / DeCarb", category: "Metallurgy", definition: "The loss of carbon from the surface of steel during hot rolling or heat treatment — creates a soft skin on an otherwise hard material. DeCarb-free stock has had this layer removed. Critical for tool steel where surface hardness is required right to the OD." },
-  { term: "Carbide", category: "Metallurgy", definition: "Hard particles of carbon compounds (iron carbide, chromium carbide, vanadium carbide) distributed through tool steel. More carbides = more wear resistance. Powder metallurgy produces finer, more uniform carbide distribution than conventional melting." },
-  { term: "Grain Size", category: "Metallurgy", definition: "The size of the individual crystals in the steel microstructure. Finer grain = tougher, better fatigue resistance, better surface finish after machining. Vanadium additions (like in W2 vs W1) refine grain size." },
-  { term: "Precipitation Hardening", category: "Metallurgy", definition: "A hardening mechanism used in 17-4PH stainless — tiny particles precipitate out of solution during a lower-temperature aging heat treatment. Allows stainless to reach alloy steel strength levels without the distortion of conventional quench & temper." },
-  { term: "Sensitization", category: "Metallurgy", definition: "What happens to standard 304 or 316 stainless at weld temperatures — chromium carbides form at grain boundaries, robbing those areas of corrosion resistance. The fix is to use 304L or 316L (low carbon) which don't sensitize. Important to explain to customers welding stainless in corrosive service." },
-  { term: "Mill Scale", category: "Metallurgy", definition: "The blue-black oxide layer that forms on steel during hot rolling. Rough, hard, not weldable until removed. Hot rolled material has it. P&O, cold finished, and machined material has it removed. A customer who says 'I can't weld through the scale' needs P&O or cold finished." },
-  { term: "Temper", category: "Metallurgy", definition: "For aluminum: the condition of the material after processing. T6 = solution heat treated and artificially aged (strongest). T5 = cooled from hot working and artificially aged. For steel: the second step of quench & temper heat treatment — reduces brittleness after hardening." },
+  { term: "Mill Scale", category: "Metallurgy", definition: "The blue-black oxide layer that forms on steel during hot rolling. Rough, hard, not weldable until removed. Hot rolled material has it. P&O, cold finished, and machined material has it removed." },
+  { term: "Tolerance", category: "Dimensions & Tolerances", definition: "The allowable variation from a specified dimension. Cold finished stock holds tighter tolerances than hot rolled. TGP holds tighter than cold drawn." },
+  { term: "Wall Thickness", category: "Dimensions & Tolerances", definition: "For tube and pipe — the thickness of the tube wall. Wall = (OD - ID) / 2. Heavier wall = more pressure capacity and more material to machine on ID." },
+  { term: "Gauge", category: "Dimensions & Tolerances", definition: "The thickness measurement for carbon steel sheet and tube wall. Gauge numbers run in reverse — higher gauge = thinner material. 10 GA = .135\", 11 GA = .120\", 16 GA = .060\". Aluminum and stainless use different gauge scales — always confirm in decimals on non-carbon material." },
 
-  // ─── DIMENSIONS / TOLERANCES ─────────────────────────────────────────────
-  { term: "Tolerance", category: "Dimensions & Tolerances", definition: "The allowable variation from a specified dimension. A 1.000\" bar with a +/-.001\" tolerance can measure anywhere from .999\" to 1.001\" and still be in spec. Cold finished stock holds tighter tolerances than hot rolled. TGP holds tighter than cold drawn." },
-  { term: "Oversize", category: "Dimensions & Tolerances", definition: "Material supplied larger than the nominal size to allow for cleanup machining. A customer who needs a finished 2.000\" shaft might order 2.125\" oversize so they have material to take off and still hit their final dimension. Common in tool steel." },
-  { term: "Nominal Size", category: "Dimensions & Tolerances", definition: "The stated or named size — not necessarily the exact measured dimension. A 1\" round bar is nominally 1\" but actual dimension depends on the tolerance band for that product. Always clarify if a customer needs exact finished size." },
-  { term: "Wall Thickness", category: "Dimensions & Tolerances", definition: "For tube and pipe — the thickness of the tube wall. Specified along with OD to fully define the tube. Wall = (OD - ID) / 2. Heavier wall = more pressure capacity and more material to machine on ID." },
-  { term: "Straightness", category: "Dimensions & Tolerances", definition: "How straight the bar or tube is along its length. Cold finished bars have better straightness than hot rolled due to the drawing/straightening process. Chamfered bar ends (PSC standard on C/F rounds) help with loading into screw machines." },
-  { term: "Gauge", category: "Dimensions & Tolerances", definition: "The thickness measurement for sheet — but the gauge number runs backwards (higher gauge = thinner sheet). 24 gauge is thinner than 10 gauge. For anything other than sheet, always use decimal thickness to avoid confusion." },
-
-  // ─── SALES / CUSTOMER TERMS ───────────────────────────────────────────────
-  { term: "Job Shop", category: "Customer Types", definition: "A machine shop that takes on a variety of custom machining work for different customers — they don't make one product, they make whatever comes in the door. High-variety, often short run. Good customer for cold finished bar and tool steel." },
-  { term: "OEM", category: "Customer Types", definition: "Original Equipment Manufacturer. A company that makes a specific product (pumps, valves, motors, machines). More predictable buying patterns than job shops — good for stocking programs and blanket orders." },
-  { term: "Fabricator", category: "Customer Types", definition: "Shop that cuts, bends, welds, and assembles structural steel or sheet metal. Primary buyers of structural shapes, plate, sheet, and tubing. Care about cut quality, straightness, and weldability more than tight machining tolerances." },
-  { term: "Distributor", category: "Customer Types", definition: "A company that buys material and resells it — they're not the end user. May be buying from PSC to fill a gap in their own inventory. Price sensitive, lower margin, but volume can be significant." },
-  { term: "Maintenance / MRO", category: "Customer Types", definition: "Maintenance, Repair & Operations. Buying material to fix or maintain existing equipment — not to make new products. Often urgent, small quantities, willing to pay for availability. PSC's next-day delivery is a big win here." },
-  { term: "Tier 1 / Tier 2 Supplier", category: "Customer Types", definition: "Supply chain terminology — Tier 1 sells directly to the OEM, Tier 2 sells to Tier 1. Knowing where a customer sits in the chain tells you how price-sensitive they are and what specs they'll need to flow down." },
-  { term: "Approved Vendor List / AVL", category: "Customer Types", definition: "A customer's list of pre-qualified suppliers they're allowed to buy from. Getting on an AVL — especially for aerospace or defense customers — can lock in business for years. PSC's certifications and traceability help qualify us." },
-  { term: "Spot Buy", category: "Customer Types", definition: "A one-time purchase outside of any ongoing agreement — customer needs something now and is just shopping around. Good opportunity to impress with service and convert to a regular account." },
-  { term: "Book Business", category: "Customer Types", definition: "Regular, recurring orders from an established customer — the backbone of a territory. Your job is to protect book business and build more of it." },
 ];
 
 const GLOSSARY_CATEGORIES = ["All", ...Array.from(new Set(GLOSSARY.map(g => g.category)))];
+
+const GAUGE_DATA = [
+  { fraction: "1/2\"",    gauge: "—",   decimal: ".500" },
+  { fraction: "7/16\"",   gauge: "—",   decimal: ".4375" },
+  { fraction: "3/8\"",    gauge: "—",   decimal: ".375" },
+  { fraction: "5/16\"",   gauge: "—",   decimal: ".3125" },
+  { fraction: "1/4\"",    gauge: "—",   decimal: ".250" },
+  { fraction: "3/16\"",   gauge: "—",   decimal: ".1875" },
+  { fraction: "—",        gauge: "7",   decimal: ".179" },
+  { fraction: "—",        gauge: "8",   decimal: ".164" },
+  { fraction: "—",        gauge: "9",   decimal: ".150" },
+  { fraction: "1/8\"",    gauge: "10",  decimal: ".135" },
+  { fraction: "—",        gauge: "11",  decimal: ".120" },
+  { fraction: "—",        gauge: "12",  decimal: ".105" },
+  { fraction: "—",        gauge: "13",  decimal: ".090" },
+  { fraction: "—",        gauge: "14",  decimal: ".075" },
+  { fraction: "—",        gauge: "15",  decimal: ".067" },
+  { fraction: "1/16\"",   gauge: "16",  decimal: ".060" },
+  { fraction: "—",        gauge: "17",  decimal: ".054" },
+  { fraction: "—",        gauge: "18",  decimal: ".048" },
+  { fraction: "—",        gauge: "19",  decimal: ".042" },
+  { fraction: "—",        gauge: "20",  decimal: ".036" },
+  { fraction: "—",        gauge: "21",  decimal: ".033" },
+  { fraction: "—",        gauge: "22",  decimal: ".030" },
+  { fraction: "—",        gauge: "24",  decimal: ".024" },
+  { fraction: "—",        gauge: "26",  decimal: ".018" },
+  { fraction: "—",        gauge: "28",  decimal: ".015" },
+];
 
 const GradeTag = ({ grade }) => (
   <span style={{
@@ -894,15 +933,8 @@ const UseRow = ({ use }) => {
               borderRadius: "5px",
               padding: "8px 10px",
             }}>
-              <div style={{
-                fontFamily: "'IBM Plex Mono', monospace",
-                fontSize: "12px", fontWeight: "600",
-                color: "#7eb8f7", marginBottom: "3px",
-              }}>{g.grade}</div>
-              <div style={{
-                fontFamily: "'IBM Plex Sans', sans-serif",
-                fontSize: "11px", color: "#8a9ab8", lineHeight: "1.5",
-              }}>{g.why}</div>
+              <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "12px", fontWeight: "600", color: "#7eb8f7", marginBottom: "3px" }}>{g.grade}</div>
+              <div style={{ fontFamily: "'IBM Plex Sans', sans-serif", fontSize: "11px", color: "#8a9ab8", lineHeight: "1.5" }}>{g.why}</div>
             </div>
           ))}
         </div>
@@ -913,105 +945,118 @@ const UseRow = ({ use }) => {
 
 const ProductCard = ({ item }) => {
   const [expanded, setExpanded] = useState(false);
-
   return (
     <div style={{
       background: "rgba(255,255,255,0.03)",
       border: "1px solid rgba(255,255,255,0.08)",
-      borderRadius: "8px",
-      marginBottom: "10px",
-      overflow: "hidden",
-      transition: "border-color 0.2s",
+      borderRadius: "8px", marginBottom: "10px", overflow: "hidden", transition: "border-color 0.2s",
     }}
       onMouseEnter={e => e.currentTarget.style.borderColor = "rgba(74,144,217,0.5)"}
       onMouseLeave={e => e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)"}
     >
-      <button
-        onClick={() => setExpanded(o => !o)}
-        style={{
-          width: "100%", background: "none", border: "none",
-          cursor: "pointer", padding: "14px 16px",
-          display: "flex", justifyContent: "space-between", alignItems: "center",
-        }}
-      >
+      <button onClick={() => setExpanded(o => !o)} style={{
+        width: "100%", background: "none", border: "none", cursor: "pointer",
+        padding: "14px 16px", display: "flex", justifyContent: "space-between", alignItems: "center",
+      }}>
         <div style={{ textAlign: "left" }}>
-          <div style={{
-            fontSize: "11px", fontWeight: "700", color: "#4a90d9",
-            fontFamily: "'IBM Plex Mono', monospace", letterSpacing: "1.5px",
-            textTransform: "uppercase", marginBottom: "3px",
-          }}>
+          <div style={{ fontSize: "11px", fontWeight: "700", color: "#4a90d9", fontFamily: "'IBM Plex Mono', monospace", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "3px" }}>
             {item.category}
           </div>
-          <div style={{
-            fontSize: "17px", fontWeight: "600", color: "#ffffff",
-            fontFamily: "'IBM Plex Sans', sans-serif",
-          }}>
+          <div style={{ fontSize: "17px", fontWeight: "600", color: "#ffffff", fontFamily: "'IBM Plex Sans', sans-serif" }}>
             {item.type}
           </div>
         </div>
-        <span style={{ color: "#4a90d9", fontSize: "20px", lineHeight: 1, fontWeight: "300" }}>
-          {expanded ? "−" : "+"}
-        </span>
+        <span style={{ color: "#4a90d9", fontSize: "20px", lineHeight: 1, fontWeight: "300" }}>{expanded ? "−" : "+"}</span>
       </button>
-
       <div style={{ padding: "0 16px 12px" }}>
         {item.grades.slice(0, 6).map(g => <GradeTag key={g} grade={g} />)}
-        {item.grades.length > 6 && (
-          <span style={{ fontSize: "11px", color: "#5a6e90", fontFamily: "'IBM Plex Mono', monospace" }}>
-            +{item.grades.length - 6} more
-          </span>
-        )}
+        {item.grades.length > 6 && <span style={{ fontSize: "11px", color: "#5a6e90", fontFamily: "'IBM Plex Mono', monospace" }}>+{item.grades.length - 6} more</span>}
       </div>
-
       {expanded && (
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)", padding: "16px" }}>
           <div style={{ marginBottom: "14px" }}>
-            <div style={{ fontSize: "10px", color: "#5a6e90", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "6px", fontFamily: "'IBM Plex Mono', monospace" }}>
-              GRADES STOCKED
-            </div>
+            <div style={{ fontSize: "10px", color: "#5a6e90", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "6px", fontFamily: "'IBM Plex Mono', monospace" }}>GRADES STOCKED</div>
             {item.grades.map(g => <GradeTag key={g} grade={g} />)}
           </div>
-
           <div style={{ marginBottom: "14px" }}>
-            <div style={{ fontSize: "10px", color: "#5a6e90", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "6px", fontFamily: "'IBM Plex Mono', monospace" }}>
-              SIZE RANGE
-            </div>
-            <div style={{ fontSize: "13px", color: "#cdd8f0", fontFamily: "'IBM Plex Sans', sans-serif", lineHeight: "1.6" }}>
-              {item.sizes}
-            </div>
+            <div style={{ fontSize: "10px", color: "#5a6e90", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "6px", fontFamily: "'IBM Plex Mono', monospace" }}>SIZE RANGE</div>
+            <div style={{ fontSize: "13px", color: "#cdd8f0", fontFamily: "'IBM Plex Sans', sans-serif", lineHeight: "1.6" }}>{item.sizes}</div>
           </div>
-
           {item.finishes.length > 0 && (
             <div style={{ marginBottom: "14px" }}>
-              <div style={{ fontSize: "10px", color: "#5a6e90", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "6px", fontFamily: "'IBM Plex Mono', monospace" }}>
-                FINISHES
-              </div>
+              <div style={{ fontSize: "10px", color: "#5a6e90", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "6px", fontFamily: "'IBM Plex Mono', monospace" }}>FINISHES</div>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "4px" }}>
                 {item.finishes.map(f => (
-                  <span key={f} style={{
-                    background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)",
-                    borderRadius: "3px", padding: "2px 8px", fontSize: "11px",
-                    color: "#8a9ab8", fontFamily: "'IBM Plex Sans', sans-serif",
-                  }}>{f}</span>
+                  <span key={f} style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: "3px", padding: "2px 8px", fontSize: "11px", color: "#8a9ab8", fontFamily: "'IBM Plex Sans', sans-serif" }}>{f}</span>
                 ))}
               </div>
             </div>
           )}
-
           {item.notes && (
             <div style={{ marginBottom: "14px", padding: "10px 12px", background: "rgba(74,144,217,0.08)", borderLeft: "3px solid #4a90d9", borderRadius: "0 4px 4px 0" }}>
-              <div style={{ fontSize: "12px", color: "#cdd8f0", fontFamily: "'IBM Plex Sans', sans-serif", lineHeight: "1.5" }}>
-                {item.notes}
-              </div>
+              <div style={{ fontSize: "12px", color: "#cdd8f0", fontFamily: "'IBM Plex Sans', sans-serif", lineHeight: "1.5" }}>{item.notes}</div>
             </div>
           )}
-
           {item.uses.length > 0 && (
             <div>
-              <div style={{ fontSize: "10px", color: "#5a6e90", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "8px", fontFamily: "'IBM Plex Mono', monospace" }}>
-                APPLICATIONS — TAP TO SEE GRADES
-              </div>
+              <div style={{ fontSize: "10px", color: "#5a6e90", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "8px", fontFamily: "'IBM Plex Mono', monospace" }}>APPLICATIONS — TAP TO SEE GRADES</div>
               {item.uses.map((u, i) => <UseRow key={i} use={u} />)}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
+
+const ServiceCard = ({ item }) => {
+  const [expanded, setExpanded] = useState(false);
+  return (
+    <div style={{
+      background: "rgba(255,255,255,0.03)",
+      border: "1px solid rgba(255,255,255,0.08)",
+      borderRadius: "8px", marginBottom: "10px", overflow: "hidden", transition: "border-color 0.2s",
+    }}
+      onMouseEnter={e => e.currentTarget.style.borderColor = "rgba(74,144,217,0.5)"}
+      onMouseLeave={e => e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)"}
+    >
+      <button onClick={() => setExpanded(o => !o)} style={{
+        width: "100%", background: "none", border: "none", cursor: "pointer",
+        padding: "14px 16px", display: "flex", justifyContent: "space-between", alignItems: "center",
+      }}>
+        <div style={{ textAlign: "left" }}>
+          <div style={{ fontSize: "11px", fontWeight: "700", color: "#4a90d9", fontFamily: "'IBM Plex Mono', monospace", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "3px" }}>
+            SERVICE
+          </div>
+          <div style={{ fontSize: "17px", fontWeight: "600", color: "#ffffff", fontFamily: "'IBM Plex Sans', sans-serif" }}>
+            {item.type}
+          </div>
+          <div style={{ fontSize: "12px", color: "#8a9ab8", fontFamily: "'IBM Plex Sans', sans-serif", marginTop: "3px" }}>
+            {item.description}
+          </div>
+        </div>
+        <span style={{ color: "#4a90d9", fontSize: "20px", lineHeight: 1, fontWeight: "300", flexShrink: 0, marginLeft: "12px" }}>{expanded ? "−" : "+"}</span>
+      </button>
+      {expanded && (
+        <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)", padding: "16px" }}>
+          <div style={{ marginBottom: "14px" }}>
+            <div style={{ fontSize: "13px", color: "#cdd8f0", fontFamily: "'IBM Plex Sans', sans-serif", lineHeight: "1.6" }}>{item.details}</div>
+          </div>
+          <div style={{ marginBottom: "14px" }}>
+            <div style={{ fontSize: "10px", color: "#5a6e90", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "6px", fontFamily: "'IBM Plex Mono', monospace" }}>CAPACITY</div>
+            <div style={{ fontSize: "12px", color: "#8a9ab8", fontFamily: "'IBM Plex Sans', sans-serif", lineHeight: "1.5" }}>{item.capacity}</div>
+          </div>
+          <div style={{ marginBottom: "14px" }}>
+            <div style={{ fontSize: "10px", color: "#5a6e90", letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "6px", fontFamily: "'IBM Plex Mono', monospace" }}>BEST FOR</div>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "4px" }}>
+              {item.bestFor.map(b => (
+                <span key={b} style={{ background: "rgba(74,144,217,0.12)", border: "1px solid rgba(74,144,217,0.25)", borderRadius: "3px", padding: "2px 8px", fontSize: "11px", color: "#7eb8f7", fontFamily: "'IBM Plex Sans', sans-serif" }}>{b}</span>
+              ))}
+            </div>
+          </div>
+          {item.notes && (
+            <div style={{ padding: "10px 12px", background: "rgba(74,144,217,0.08)", borderLeft: "3px solid #4a90d9", borderRadius: "0 4px 4px 0" }}>
+              <div style={{ fontSize: "12px", color: "#cdd8f0", fontFamily: "'IBM Plex Sans', sans-serif", lineHeight: "1.5" }}>{item.notes}</div>
             </div>
           )}
         </div>
@@ -1024,47 +1069,25 @@ const GlossaryCard = ({ item }) => {
   const [open, setOpen] = useState(false);
   return (
     <div style={{
-      background: "rgba(255,255,255,0.03)",
-      border: "1px solid rgba(255,255,255,0.08)",
-      borderRadius: "8px", marginBottom: "6px",
-      overflow: "hidden", transition: "border-color 0.2s",
+      background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)",
+      borderRadius: "8px", marginBottom: "6px", overflow: "hidden", transition: "border-color 0.2s",
     }}
       onMouseEnter={e => e.currentTarget.style.borderColor = "rgba(74,144,217,0.4)"}
       onMouseLeave={e => e.currentTarget.style.borderColor = open ? "rgba(74,144,217,0.3)" : "rgba(255,255,255,0.08)"}
     >
-      <button
-        onClick={() => setOpen(o => !o)}
-        style={{
-          width: "100%", background: "none", border: "none", cursor: "pointer",
-          padding: "12px 16px", display: "flex",
-          justifyContent: "space-between", alignItems: "center",
-        }}
-      >
+      <button onClick={() => setOpen(o => !o)} style={{
+        width: "100%", background: "none", border: "none", cursor: "pointer",
+        padding: "12px 16px", display: "flex", justifyContent: "space-between", alignItems: "center",
+      }}>
         <div style={{ display: "flex", alignItems: "baseline", gap: "10px" }}>
-          <span style={{
-            fontFamily: "'IBM Plex Mono', monospace",
-            fontSize: "14px", fontWeight: "700", color: "#7eb8f7",
-          }}>{item.term}</span>
-          <span style={{
-            fontFamily: "'IBM Plex Mono', monospace",
-            fontSize: "9px", color: "#3a4a6a",
-            letterSpacing: "1px", textTransform: "uppercase",
-          }}>{item.category}</span>
+          <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "14px", fontWeight: "700", color: "#7eb8f7" }}>{item.term}</span>
+          <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", color: "#3a4a6a", letterSpacing: "1px", textTransform: "uppercase" }}>{item.category}</span>
         </div>
-        <span style={{ color: "#4a90d9", fontSize: "18px", lineHeight: 1, fontWeight: "300", flexShrink: 0 }}>
-          {open ? "−" : "+"}
-        </span>
+        <span style={{ color: "#4a90d9", fontSize: "18px", lineHeight: 1, fontWeight: "300", flexShrink: 0 }}>{open ? "−" : "+"}</span>
       </button>
       {open && (
-        <div style={{
-          padding: "0 16px 14px",
-          borderTop: "1px solid rgba(255,255,255,0.06)",
-          paddingTop: "12px",
-        }}>
-          <div style={{
-            fontSize: "13px", color: "#8a9ab8",
-            fontFamily: "'IBM Plex Sans', sans-serif", lineHeight: "1.7",
-          }}>{item.definition}</div>
+        <div style={{ padding: "0 16px 14px", borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: "12px" }}>
+          <div style={{ fontSize: "13px", color: "#8a9ab8", fontFamily: "'IBM Plex Sans', sans-serif", lineHeight: "1.7" }}>{item.definition}</div>
         </div>
       )}
     </div>
@@ -1077,23 +1100,23 @@ export default function PSCFieldApp() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [glossarySearch, setGlossarySearch] = useState("");
   const [glossaryCategory, setGlossaryCategory] = useState("All");
+  const [serviceSearch, setServiceSearch] = useState("");
 
   const filtered = useMemo(() => {
     const q = search.toLowerCase().trim();
     return PSC_DATA.filter(item => {
       const matchCat = activeCategory === "All" || item.category === activeCategory;
       if (!q) return matchCat;
-      const haystack = [
-        item.category, item.type,
-        ...item.grades,
-        item.sizes, item.notes,
-        ...item.uses.map(u => u.label),
-        ...item.uses.flatMap(u => u.grades.map(g => g.grade + " " + g.why)),
-        ...item.finishes,
-      ].join(" ").toLowerCase();
+      const haystack = [item.category, item.type, ...item.grades, item.sizes, item.notes, ...item.uses.map(u => u.label), ...item.uses.flatMap(u => u.grades.map(g => g.grade + " " + g.why)), ...item.finishes].join(" ").toLowerCase();
       return matchCat && haystack.includes(q);
     });
   }, [search, activeCategory]);
+
+  const filteredServices = useMemo(() => {
+    const q = serviceSearch.toLowerCase().trim();
+    if (!q) return PSC_SERVICES;
+    return PSC_SERVICES.filter(s => [s.type, s.description, s.details, s.capacity, ...s.bestFor, s.notes].join(" ").toLowerCase().includes(q));
+  }, [serviceSearch]);
 
   const filteredGlossary = useMemo(() => {
     const q = glossarySearch.toLowerCase().trim();
@@ -1104,13 +1127,15 @@ export default function PSCFieldApp() {
     });
   }, [glossarySearch, glossaryCategory]);
 
+  const TABS = [
+    { key: "products", label: "Products" },
+    { key: "services", label: "Services" },
+    { key: "glossary", label: "Glossary" },
+    { key: "gauge", label: "Gauge" },
+  ];
+
   return (
-    <div style={{
-      minHeight: "100vh",
-      background: "#0a0f1e",
-      color: "#e8edf5",
-      fontFamily: "'IBM Plex Sans', sans-serif",
-    }}>
+    <div style={{ minHeight: "100vh", background: "#0a0f1e", color: "#e8edf5", fontFamily: "'IBM Plex Sans', sans-serif" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600;700&family=Barlow+Condensed:wght@700;900&display=swap');
         * { box-sizing: border-box; }
@@ -1129,37 +1154,15 @@ export default function PSCFieldApp() {
         boxShadow: "0 4px 24px rgba(0,0,0,0.5)",
       }}>
         <div style={{ maxWidth: "600px", margin: "0 auto" }}>
-
-          {/* Logo row */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "14px" }}>
             <div>
-              <div style={{
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontSize: "22px", fontWeight: "900",
-                color: "#ffffff", letterSpacing: "1px", lineHeight: 1,
-              }}>Pennsylvania Steel Company</div>
-              <div style={{
-                fontFamily: "'IBM Plex Mono', monospace",
-                fontSize: "10px", fontWeight: "600",
-                color: "#4a90d9", letterSpacing: "3px",
-                textTransform: "uppercase", marginTop: "3px",
-              }}>Field Reference</div>
+              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "22px", fontWeight: "900", color: "#ffffff", letterSpacing: "1px", lineHeight: 1 }}>Pennsylvania Steel Company</div>
+              <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", fontWeight: "600", color: "#4a90d9", letterSpacing: "3px", textTransform: "uppercase", marginTop: "3px" }}>Field Reference</div>
             </div>
-            <div style={{
-              background: "rgba(74,144,217,0.12)",
-              border: "1px solid rgba(74,144,217,0.25)",
-              borderRadius: "6px", padding: "4px 10px",
-              fontSize: "10px", color: "#4a90d9",
-              fontFamily: "'IBM Plex Mono', monospace", letterSpacing: "1px",
-            }}>PASTEEL.COM</div>
+            <div style={{ background: "rgba(74,144,217,0.12)", border: "1px solid rgba(74,144,217,0.25)", borderRadius: "6px", padding: "4px 10px", fontSize: "10px", color: "#4a90d9", fontFamily: "'IBM Plex Mono', monospace", letterSpacing: "1px" }}>PASTEEL.COM</div>
           </div>
-
-          {/* Tab bar */}
           <div style={{ display: "flex", gap: "0px" }}>
-            {[
-              { key: "products", label: "Products" },
-              { key: "glossary", label: "Glossary" },
-            ].map(t => (
+            {TABS.map(t => (
               <button key={t.key} onClick={() => setTab(t.key)} style={{
                 flex: 1, background: "none", border: "none", cursor: "pointer",
                 padding: "10px 0", fontSize: "13px", fontWeight: "700",
@@ -1176,68 +1179,69 @@ export default function PSCFieldApp() {
       {/* PRODUCTS TAB */}
       {tab === "products" && (
         <>
-          <div style={{
-            background: "#091428",
-            borderBottom: "1px solid rgba(74,144,217,0.1)",
-            padding: "12px 16px",
-            position: "sticky", top: "89px", zIndex: 99,
-          }}>
+          <div style={{ background: "#091428", borderBottom: "1px solid rgba(74,144,217,0.1)", padding: "12px 16px", position: "sticky", top: "89px", zIndex: 99 }}>
             <div style={{ maxWidth: "600px", margin: "0 auto" }}>
               <div style={{ position: "relative", marginBottom: "10px" }}>
                 <span style={{ position: "absolute", left: "12px", top: "50%", transform: "translateY(-50%)", color: "#4a90d9", fontSize: "16px" }}>⌕</span>
-                <input
-                  type="text"
-                  placeholder="Search grade, type, or application... e.g. 4140, DOM, mold, screw machine"
-                  value={search}
-                  onChange={e => setSearch(e.target.value)}
-                  style={{
-                    width: "100%", background: "rgba(255,255,255,0.04)",
-                    border: "1px solid rgba(74,144,217,0.2)", borderRadius: "6px",
-                    padding: "10px 36px 10px 36px", color: "#e8edf5",
-                    fontSize: "13px", fontFamily: "'IBM Plex Sans', sans-serif", outline: "none",
-                  }}
+                <input type="text" placeholder="Search grade, type, or application... e.g. 4140, DOM, mold, screw machine" value={search} onChange={e => setSearch(e.target.value)}
+                  style={{ width: "100%", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(74,144,217,0.2)", borderRadius: "6px", padding: "10px 36px 10px 36px", color: "#e8edf5", fontSize: "13px", fontFamily: "'IBM Plex Sans', sans-serif", outline: "none" }}
                   onFocus={e => e.target.style.borderColor = "#4a90d9"}
                   onBlur={e => e.target.style.borderColor = "rgba(74,144,217,0.2)"}
                 />
-                {search && (
-                  <button onClick={() => setSearch("")} style={{
-                    position: "absolute", right: "10px", top: "50%", transform: "translateY(-50%)",
-                    background: "none", border: "none", color: "#5a6e90", cursor: "pointer", fontSize: "18px",
-                  }}>×</button>
-                )}
+                {search && <button onClick={() => setSearch("")} style={{ position: "absolute", right: "10px", top: "50%", transform: "translateY(-50%)", background: "none", border: "none", color: "#5a6e90", cursor: "pointer", fontSize: "18px" }}>×</button>}
               </div>
               <div style={{ display: "flex", gap: "6px", overflowX: "auto", paddingBottom: "4px" }}>
                 {CATEGORIES.map(cat => (
                   <button key={cat} onClick={() => setActiveCategory(cat)} style={{
                     whiteSpace: "nowrap", padding: "5px 12px", borderRadius: "20px",
-                    fontSize: "11px", fontFamily: "'IBM Plex Mono', monospace",
-                    fontWeight: "600", letterSpacing: "0.5px", cursor: "pointer", border: "1px solid",
+                    fontSize: "11px", fontFamily: "'IBM Plex Mono', monospace", fontWeight: "600",
+                    letterSpacing: "0.5px", cursor: "pointer", border: "1px solid",
                     background: activeCategory === cat ? "#4a90d9" : "transparent",
                     borderColor: activeCategory === cat ? "#4a90d9" : "rgba(255,255,255,0.12)",
-                    color: activeCategory === cat ? "#ffffff" : "#5a6e90",
-                    transition: "all 0.15s",
+                    color: activeCategory === cat ? "#ffffff" : "#5a6e90", transition: "all 0.15s",
                   }}>
-                    {cat === "Cold Finished Steel" ? "C/F Steel" :
-                     cat === "Hot Rolled Carbon / Alloy Steel" ? "HR Steel" :
-                     cat === "Carbon Steel Tube" ? "Tube/Pipe" : cat}
+                    {cat === "Cold Finished Steel" ? "C/F Steel" : cat === "Hot Rolled Carbon / Alloy Steel" ? "HR Steel" : cat === "Carbon Steel Tube" ? "Tube/Pipe" : cat}
                   </button>
                 ))}
               </div>
             </div>
           </div>
-
           <div style={{ maxWidth: "600px", margin: "0 auto", padding: "16px" }}>
             <div style={{ fontSize: "11px", color: "#3a4a6a", fontFamily: "'IBM Plex Mono', monospace", marginBottom: "12px", letterSpacing: "1px" }}>
               {filtered.length} RESULT{filtered.length !== 1 ? "S" : ""}{search && ` FOR "${search.toUpperCase()}"`}
             </div>
             {filtered.length === 0 ? (
               <div style={{ textAlign: "center", padding: "60px 20px", color: "#3a4a6a", fontFamily: "'IBM Plex Mono', monospace", fontSize: "13px" }}>
-                NO RESULTS FOUND<br />
-                <span style={{ fontSize: "11px", color: "#2a3a5a", marginTop: "8px", display: "block" }}>Try a grade number, material type, or application</span>
+                NO RESULTS FOUND<br /><span style={{ fontSize: "11px", color: "#2a3a5a", marginTop: "8px", display: "block" }}>Try a grade number, material type, or application</span>
               </div>
-            ) : (
-              filtered.map(item => <ProductCard key={item.id} item={item} />)
-            )}
+            ) : filtered.map(item => <ProductCard key={item.id} item={item} />)}
+          </div>
+        </>
+      )}
+
+      {/* SERVICES TAB */}
+      {tab === "services" && (
+        <>
+          <div style={{ background: "#091428", borderBottom: "1px solid rgba(74,144,217,0.1)", padding: "12px 16px", position: "sticky", top: "89px", zIndex: 99 }}>
+            <div style={{ maxWidth: "600px", margin: "0 auto" }}>
+              <div style={{ position: "relative" }}>
+                <span style={{ position: "absolute", left: "12px", top: "50%", transform: "translateY(-50%)", color: "#4a90d9", fontSize: "16px" }}>⌕</span>
+                <input type="text" placeholder="Search services... e.g. plasma, sawing, delivery, stocking" value={serviceSearch} onChange={e => setServiceSearch(e.target.value)}
+                  style={{ width: "100%", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(74,144,217,0.2)", borderRadius: "6px", padding: "10px 36px 10px 36px", color: "#e8edf5", fontSize: "13px", fontFamily: "'IBM Plex Sans', sans-serif", outline: "none" }}
+                  onFocus={e => e.target.style.borderColor = "#4a90d9"}
+                  onBlur={e => e.target.style.borderColor = "rgba(74,144,217,0.2)"}
+                />
+                {serviceSearch && <button onClick={() => setServiceSearch("")} style={{ position: "absolute", right: "10px", top: "50%", transform: "translateY(-50%)", background: "none", border: "none", color: "#5a6e90", cursor: "pointer", fontSize: "18px" }}>×</button>}
+              </div>
+            </div>
+          </div>
+          <div style={{ maxWidth: "600px", margin: "0 auto", padding: "16px" }}>
+            <div style={{ fontSize: "11px", color: "#3a4a6a", fontFamily: "'IBM Plex Mono', monospace", marginBottom: "12px", letterSpacing: "1px" }}>
+              {filteredServices.length} SERVICE{filteredServices.length !== 1 ? "S" : ""}
+            </div>
+            {filteredServices.length === 0 ? (
+              <div style={{ textAlign: "center", padding: "60px 20px", color: "#3a4a6a", fontFamily: "'IBM Plex Mono', monospace", fontSize: "13px" }}>NO RESULTS FOUND</div>
+            ) : filteredServices.map(item => <ServiceCard key={item.id} item={item} />)}
           </div>
         </>
       )}
@@ -1245,74 +1249,86 @@ export default function PSCFieldApp() {
       {/* GLOSSARY TAB */}
       {tab === "glossary" && (
         <>
-          <div style={{
-            background: "#091428",
-            borderBottom: "1px solid rgba(74,144,217,0.1)",
-            padding: "12px 16px",
-            position: "sticky", top: "89px", zIndex: 99,
-          }}>
+          <div style={{ background: "#091428", borderBottom: "1px solid rgba(74,144,217,0.1)", padding: "12px 16px", position: "sticky", top: "89px", zIndex: 99 }}>
             <div style={{ maxWidth: "600px", margin: "0 auto" }}>
               <div style={{ position: "relative", marginBottom: "10px" }}>
                 <span style={{ position: "absolute", left: "12px", top: "50%", transform: "translateY(-50%)", color: "#4a90d9", fontSize: "16px" }}>⌕</span>
-                <input
-                  type="text"
-                  placeholder="Search terms... e.g. TGP, DOM, mill cert, carburizing"
-                  value={glossarySearch}
-                  onChange={e => setGlossarySearch(e.target.value)}
-                  style={{
-                    width: "100%", background: "rgba(255,255,255,0.04)",
-                    border: "1px solid rgba(74,144,217,0.2)", borderRadius: "6px",
-                    padding: "10px 36px 10px 36px", color: "#e8edf5",
-                    fontSize: "13px", fontFamily: "'IBM Plex Sans', sans-serif", outline: "none",
-                  }}
+                <input type="text" placeholder="Search terms... e.g. TGP, DOM, mill cert, carburizing" value={glossarySearch} onChange={e => setGlossarySearch(e.target.value)}
+                  style={{ width: "100%", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(74,144,217,0.2)", borderRadius: "6px", padding: "10px 36px 10px 36px", color: "#e8edf5", fontSize: "13px", fontFamily: "'IBM Plex Sans', sans-serif", outline: "none" }}
                   onFocus={e => e.target.style.borderColor = "#4a90d9"}
                   onBlur={e => e.target.style.borderColor = "rgba(74,144,217,0.2)"}
                 />
-                {glossarySearch && (
-                  <button onClick={() => setGlossarySearch("")} style={{
-                    position: "absolute", right: "10px", top: "50%", transform: "translateY(-50%)",
-                    background: "none", border: "none", color: "#5a6e90", cursor: "pointer", fontSize: "18px",
-                  }}>×</button>
-                )}
+                {glossarySearch && <button onClick={() => setGlossarySearch("")} style={{ position: "absolute", right: "10px", top: "50%", transform: "translateY(-50%)", background: "none", border: "none", color: "#5a6e90", cursor: "pointer", fontSize: "18px" }}>×</button>}
               </div>
               <div style={{ display: "flex", gap: "6px", overflowX: "auto", paddingBottom: "4px" }}>
                 {GLOSSARY_CATEGORIES.map(cat => (
                   <button key={cat} onClick={() => setGlossaryCategory(cat)} style={{
                     whiteSpace: "nowrap", padding: "5px 12px", borderRadius: "20px",
-                    fontSize: "11px", fontFamily: "'IBM Plex Mono', monospace",
-                    fontWeight: "600", letterSpacing: "0.5px", cursor: "pointer", border: "1px solid",
+                    fontSize: "11px", fontFamily: "'IBM Plex Mono', monospace", fontWeight: "600",
+                    letterSpacing: "0.5px", cursor: "pointer", border: "1px solid",
                     background: glossaryCategory === cat ? "#4a90d9" : "transparent",
                     borderColor: glossaryCategory === cat ? "#4a90d9" : "rgba(255,255,255,0.12)",
-                    color: glossaryCategory === cat ? "#ffffff" : "#5a6e90",
-                    transition: "all 0.15s",
+                    color: glossaryCategory === cat ? "#ffffff" : "#5a6e90", transition: "all 0.15s",
                   }}>{cat}</button>
                 ))}
               </div>
             </div>
           </div>
-
           <div style={{ maxWidth: "600px", margin: "0 auto", padding: "16px" }}>
             <div style={{ fontSize: "11px", color: "#3a4a6a", fontFamily: "'IBM Plex Mono', monospace", marginBottom: "12px", letterSpacing: "1px" }}>
               {filteredGlossary.length} TERM{filteredGlossary.length !== 1 ? "S" : ""}{glossarySearch && ` FOR "${glossarySearch.toUpperCase()}"`}
             </div>
             {filteredGlossary.length === 0 ? (
-              <div style={{ textAlign: "center", padding: "60px 20px", color: "#3a4a6a", fontFamily: "'IBM Plex Mono', monospace", fontSize: "13px" }}>
-                NO RESULTS FOUND
-              </div>
-            ) : (
-              filteredGlossary.map((item, i) => <GlossaryCard key={i} item={item} />)
-            )}
+              <div style={{ textAlign: "center", padding: "60px 20px", color: "#3a4a6a", fontFamily: "'IBM Plex Mono', monospace", fontSize: "13px" }}>NO RESULTS FOUND</div>
+            ) : filteredGlossary.map((item, i) => <GlossaryCard key={i} item={item} />)}
           </div>
         </>
       )}
 
-      {/* Footer */}
-      <div style={{
-        textAlign: "center", padding: "24px 16px",
-        borderTop: "1px solid rgba(255,255,255,0.05)",
-        fontSize: "10px", color: "#3a4a6a", fontFamily: "'IBM Plex Mono', monospace", letterSpacing: "1px",
-      }}>
-        PENNSYLVANIA STEEL COMPANY · (800) 999-2997 · PASTEEL.COM
+      {/* GAUGE CHART TAB */}
+      {tab === "gauge" && (
+        <div style={{ maxWidth: "600px", margin: "0 auto", padding: "16px" }}>
+          <div style={{ fontSize: "11px", color: "#3a4a6a", fontFamily: "'IBM Plex Mono', monospace", marginBottom: "16px", letterSpacing: "1px" }}>
+            CARBON STEEL — GAUGE REFERENCE
+          </div>
+          <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "8px", overflow: "hidden" }}>
+            {/* Header */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", background: "rgba(74,144,217,0.15)", borderBottom: "1px solid rgba(74,144,217,0.25)", padding: "10px 16px" }}>
+              <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", fontWeight: "700", color: "#4a90d9", letterSpacing: "1px", textTransform: "uppercase" }}>Fraction</div>
+              <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", fontWeight: "700", color: "#4a90d9", letterSpacing: "1px", textTransform: "uppercase", textAlign: "center" }}>Gauge</div>
+              <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", fontWeight: "700", color: "#4a90d9", letterSpacing: "1px", textTransform: "uppercase", textAlign: "right" }}>Decimal</div>
+            </div>
+            {/* Rows */}
+            {GAUGE_DATA.map((row, i) => (
+              <div key={i} style={{
+                display: "grid", gridTemplateColumns: "1fr 1fr 1fr",
+                padding: "10px 16px",
+                borderBottom: i < GAUGE_DATA.length - 1 ? "1px solid rgba(255,255,255,0.05)" : "none",
+                background: i % 2 === 0 ? "transparent" : "rgba(255,255,255,0.02)",
+              }}>
+                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "13px", color: row.fraction !== "—" ? "#ffffff" : "#3a4a6a" }}>
+                  {row.fraction}
+                </div>
+                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "13px", color: row.gauge !== "—" ? "#7eb8f7" : "#3a4a6a", textAlign: "center", fontWeight: row.gauge !== "—" ? "600" : "400" }}>
+                  {row.gauge !== "—" ? `${row.gauge} GA` : "—"}
+                </div>
+                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "13px", color: "#cdd8f0", textAlign: "right" }}>
+                  {row.decimal + '"'}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div style={{ marginTop: "12px", padding: "10px 12px", background: "rgba(74,144,217,0.08)", borderLeft: "3px solid #4a90d9", borderRadius: "0 4px 4px 0" }}>
+            <div style={{ fontSize: "12px", color: "#cdd8f0", fontFamily: "'IBM Plex Sans', sans-serif", lineHeight: "1.6" }}>
+              Carbon steel gauge reference — applies to carbon steel sheet and carbon steel tube wall thickness. Gauge numbers run in reverse: higher gauge = thinner material. Aluminum and stainless use different gauge scales — always confirm in decimals when quoting non-carbon material.
+            </div>
+          </div>
+        </div>
+      )}
+
+
+      <div style={{ textAlign: "center", padding: "24px 16px", borderTop: "1px solid rgba(255,255,255,0.05)", fontSize: "10px", color: "#3a4a6a", fontFamily: "'IBM Plex Mono', monospace", letterSpacing: "1px" }}>
+        PENNSYLVANIA STEEL COMPANY · PASTEEL.COM
       </div>
     </div>
   );
