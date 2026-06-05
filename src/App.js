@@ -300,7 +300,7 @@ const PSC_DATA = [
     id: "ss-rounds",
     category: "Stainless Steel",
     type: "Rounds",
-    grades: ["303","304","304L","316","316L","416","17-4PH"],
+    grades: ["303","304","304L","316","316L","416","174PH"],
     sizes: "1/4\" through 12\" diameter",
     finishes: ["Cold Drawn","Turned Ground & Polished"],
     notes: "",
@@ -318,7 +318,7 @@ const PSC_DATA = [
         { grade: "316L", why: "Low carbon 316 — same chloride resistance with better weldability, preferred for welded marine/chemical parts" },
       ]},
       { label: "High strength, precipitation hardened (aerospace, medical)", grades: [
-        { grade: "17-4PH", why: "Precipitation hardened — combines stainless corrosion resistance with alloy steel strength levels, heat treatable" },
+        { grade: "174PH", why: "Precipitation hardened — combines stainless corrosion resistance with alloy steel strength levels, heat treatable" },
       ]},
     ],
   },
