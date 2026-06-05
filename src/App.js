@@ -785,9 +785,9 @@ const PSC_DATA = [
     category: "Specialty Products",
     type: "Copper & Brass Sheet / Plate",
     grades: ["Brass","Copper"],
-    sizes: "Standard sheet and plate sizes — contact branch for availability",
+    sizes: "Contact your branch for available sizes and current stock.",
     finishes: ["Mill"],
-    notes: "Available in sheet and plate form. Contact your branch to confirm current stock and sizes.",
+    notes: "Availability varies by branch. Contact your branch to confirm current stock, sizes, and lead time before quoting.",
     uses: [
       { label: "Electrical applications", grades: [
         { grade: "Copper", why: "Highest electrical conductivity of any common metal — standard for bus bars, electrical sheet, and conductive components" },
