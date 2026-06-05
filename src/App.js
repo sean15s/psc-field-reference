@@ -857,11 +857,11 @@ const PSC_SERVICES = [
   {
     id: "delivery",
     type: "Delivery",
-    description: "Every location has its own fleet. Next day delivery is standard. Same day pickup available.",
-    details: "Each of PSC's 11 regional warehouses operates its own fleet of PSC trucks driven by PSC employees — not a third party carrier. Next day delivery is the standard expectation, not the exception. Same day pickup is available at all branch locations.",
+    description: "Regional delivery available across our service area. Next day standard in most areas. Same day pickup available.",
+    details: "PSC offers regional delivery to customers across our service area. Next day delivery is standard in most areas. Same day pickup is available at all branch locations. Contact your branch for delivery schedules and availability in your area.",
     capacity: "All 11 locations. Regional delivery area from each branch. Same day pickup at all locations.",
-    bestFor: ["All customers in service area", "Time-sensitive orders", "JIT programs", "Large or heavy material that can't ship UPS"],
-    notes: "PSC drivers, PSC trucks — not a freight carrier. Next day is standard. Same day pickup available at all branches.",
+    bestFor: ["All customers in service area", "Time-sensitive orders", "JIT programs", "Large or heavy material"],
+    notes: "Contact your branch for delivery schedules and availability in your area.",
   },
 ];
 
@@ -1422,7 +1422,9 @@ export default function PSCFieldApp() {
               <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "22px", fontWeight: "900", color: "#ffffff", letterSpacing: "1px", lineHeight: 1 }}>Pennsylvania Steel Company</div>
               <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", fontWeight: "600", color: "#4a90d9", letterSpacing: "3px", textTransform: "uppercase", marginTop: "3px" }}>Field Reference</div>
             </div>
-            <div style={{ background: "rgba(74,144,217,0.12)", border: "1px solid rgba(74,144,217,0.25)", borderRadius: "6px", padding: "4px 10px", fontSize: "10px", color: "#4a90d9", fontFamily: "'IBM Plex Mono', monospace", letterSpacing: "1px" }}>PASTEEL.COM</div>
+            <a href="https://www.pasteel.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+              <div style={{ background: "rgba(74,144,217,0.12)", border: "1px solid rgba(74,144,217,0.25)", borderRadius: "6px", padding: "4px 10px", fontSize: "10px", color: "#4a90d9", fontFamily: "'IBM Plex Mono', monospace", letterSpacing: "1px" }}>PASTEEL.COM</div>
+            </a>
           </div>
           <div style={{ display: "flex", gap: "0px" }}>
             {TABS.map(t => (
