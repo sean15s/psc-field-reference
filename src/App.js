@@ -96,23 +96,31 @@ const PSC_DATA = [
     id: "hr-rounds",
     category: "Hot Rolled Carbon / Alloy Steel",
     type: "Rounds",
-    grades: ["1018","1045","1141","1117","8620","4140 Annealed","4140 HT","4340"],
+    grades: ["A36","B16","C.Q.","1018","1045","1117","1141","8620","4130","4140 Annealed","4140 HT","4150","4340"],
     sizes: "2\" through 22\" diameter",
     finishes: ["As-rolled","Annealed","Heat-Treated"],
     notes: "Full range of low carbon and alloy. Large diameter specialty. Confirm availability on diameters above 18\" with your branch.",
     uses: [
+      { label: "Structural and general fabrication", grades: [
+        { grade: "A36", why: "Standard structural grade — 36 ksi yield, excellent weldability, economical for non-critical round bar applications" },
+        { grade: "C.Q.", why: "Commercial Quality — general purpose low carbon round bar for non-critical fabrication and welding" },
+      ]},
       { label: "Large shafts, axles, rolls", grades: [
         { grade: "1045", why: "Medium carbon — through-hardenable, good strength-to-cost ratio for large diameter shafts" },
         { grade: "4140 HT", why: "Heat treated alloy — significantly higher strength and toughness than 1045 for demanding applications" },
+        { grade: "4150", why: "Higher carbon than 4140 — greater hardness potential after heat treat for more demanding wear applications" },
         { grade: "4340", why: "Highest toughness alloy — used when 4140 isn't strong enough, common in heavy equipment and aerospace" },
       ]},
       { label: "General structural / machined components", grades: [
         { grade: "1018", why: "Low carbon — weldable, machinable, economical for non-critical structural parts" },
-        { grade: "1045", why: "More strength than 1018 with still-good weldability and machinability" },
+        { grade: "B16", why: "Alloy grade for stud bolts and high temperature fasteners — good elevated temperature strength" },
       ]},
       { label: "Free machining applications", grades: [
         { grade: "1141", why: "Resulfurized — better chip breaking and surface finish than plain carbon at same strength level" },
         { grade: "1117", why: "Low carbon free machining — machinable and carburizable, good for pins and light shafts" },
+      ]},
+      { label: "High strength / aircraft / motorsport", grades: [
+        { grade: "4130", why: "Chrome-moly alloy — better weldability than 4140, slightly less strength, preferred for welded high strength applications" },
       ]},
       { label: "Carburizing / case hardening", grades: [
         { grade: "8620", why: "Nickel-chrome-moly low carbon — carburizes to a very hard surface with tough, ductile core" },
@@ -123,16 +131,45 @@ const PSC_DATA = [
     id: "hr-shapes",
     category: "Hot Rolled Carbon / Alloy Steel",
     type: "Structural Shapes",
-    grades: ["A36 / standard carbon"],
+    grades: ["A36"],
     sizes: "Angles (bar & structural), Beams (standard & wide flange), Channels (bar & structural)",
     finishes: ["As-rolled"],
     notes: "",
     uses: [
       { label: "Structural fabrication, frames, supports", grades: [
-        { grade: "A36 / standard carbon", why: "36 ksi minimum yield — the standard structural grade, excellent weldability, widely specified" },
+        { grade: "A36", why: "36 ksi minimum yield — the standard structural grade, excellent weldability, widely specified" },
       ]},
       { label: "Construction, trailers, equipment frames", grades: [
-        { grade: "A36 / standard carbon", why: "Cost-effective, readily available, easy to weld and fabricate for heavy frame applications" },
+        { grade: "A36", why: "Cost-effective, readily available, easy to weld and fabricate for heavy frame applications" },
+      ]},
+    ],
+  },
+  {
+    id: "hr-flats",
+    category: "Hot Rolled Carbon / Alloy Steel",
+    type: "Flat Bars",
+    grades: ["A36","MQ"],
+    sizes: "Standard flat bar sizes",
+    finishes: ["As-rolled"],
+    notes: "",
+    uses: [
+      { label: "General fabrication, welding", grades: [
+        { grade: "A36", why: "Standard structural flat bar — weldable, machinable, economical for general fab applications" },
+        { grade: "MQ", why: "Merchant Quality — general purpose flat bar for non-critical fabrication where tight tolerance isn't required" },
+      ]},
+    ],
+  },
+  {
+    id: "hr-squares",
+    category: "Hot Rolled Carbon / Alloy Steel",
+    type: "Square Bars",
+    grades: ["A36"],
+    sizes: "Standard square bar sizes",
+    finishes: ["As-rolled"],
+    notes: "",
+    uses: [
+      { label: "General structural and fabrication", grades: [
+        { grade: "A36", why: "Standard grade for hot rolled square bar — weldable, economical, widely available" },
       ]},
     ],
   },
@@ -189,16 +226,14 @@ const PSC_DATA = [
     id: "tube-structural",
     category: "Carbon Steel Tube",
     type: "Structural Tubing",
-    grades: ["ASTM A500","ASTM A513"],
+    grades: ["ASTM A500 Grade B","ASTM A500 Grade C"],
     sizes: "Rectangular: 1/2\"×1\"×.062\" wall through 12\"×8\"×1/2\" wall. Square: 1/2\"×.065\" wall through 14\"×1/2\" wall.",
     finishes: ["ERW"],
-    notes: "",
+    notes: "A500 is the standard spec for cold formed welded structural tubing — square and rectangular HSS. Grade B: 46 ksi yield. Grade C: 50 ksi yield.",
     uses: [
       { label: "Structural frames, columns, supports", grades: [
-        { grade: "ASTM A500", why: "Standard structural tube spec — 46 ksi minimum yield, the go-to for construction and fabrication" },
-      ]},
-      { label: "Mechanical / precision tubing", grades: [
-        { grade: "ASTM A513", why: "Tighter OD/wall tolerances than A500 — better for mechanical applications where fit matters" },
+        { grade: "ASTM A500 Grade B", why: "46 ksi minimum yield — the most common structural tube grade, widely specified for construction and fabrication" },
+        { grade: "ASTM A500 Grade C", why: "50 ksi minimum yield — higher strength grade for applications where Grade B doesn't meet the spec" },
       ]},
     ],
   },
@@ -206,24 +241,24 @@ const PSC_DATA = [
     id: "tube-round",
     category: "Carbon Steel Tube",
     type: "Round Tubing",
-    grades: ["DOM","CD Seamless","ERW","HF Seamless","4140","4130"],
+    grades: ["DOM — A513","ERW — A513","HF Seamless — A519","CD Seamless — A519","4140 Seamless","4130 Seamless"],
     sizes: "1/4\" OD through 30\" OD",
     finishes: ["As-drawn","Seamless"],
-    notes: "",
+    notes: "DOM, ERW, HF Seamless, and CD Seamless are tube types — not steel grades. Underlying carbon steel is 1020 or 1026. 4140 and 4130 are alloy grades available in seamless.",
     uses: [
       { label: "Hydraulic / pneumatic cylinders (tight tolerances)", grades: [
-        { grade: "DOM", why: "Drawn Over Mandrel — tightest ID tolerance of any tube, smooth bore critical for cylinder applications" },
+        { grade: "DOM — A513", why: "Drawn Over Mandrel — tightest ID tolerance of any tube, smooth bore critical for cylinder applications" },
       ]},
-      { label: "High pressure hydraulic / structural precision", grades: [
-        { grade: "CD Seamless", why: "No weld seam means uniform strength in all directions — better for pressure applications than ERW" },
-        { grade: "HF Seamless", why: "Hot finished seamless — heavier walls available, good for high pressure and elevated temperature" },
+      { label: "High pressure / precision mechanical", grades: [
+        { grade: "CD Seamless — A519", why: "Cold drawn seamless — no weld seam, tight tolerances, best combination of dimensional accuracy and pressure rating" },
+        { grade: "HF Seamless — A519", why: "Hot finished seamless — heavier walls available, good for high pressure and elevated temperature applications" },
       ]},
       { label: "General mechanical tubing", grades: [
-        { grade: "ERW", why: "Electric resistance welded — economical, good dimensional consistency, fine for non-pressure structural use" },
+        { grade: "ERW — A513", why: "Electric resistance welded — economical, good dimensional consistency, fine for non-pressure structural and mechanical use" },
       ]},
       { label: "High strength / aircraft / motorsport", grades: [
-        { grade: "4140", why: "Chrome-moly alloy tube — excellent strength-to-weight, heat treatable, standard for roll cages and hydraulic" },
-        { grade: "4130", why: "Lower carbon than 4140 — better weldability, slightly less strength, preferred for aircraft and welded structures" },
+        { grade: "4140 Seamless", why: "Chrome-moly alloy tube — excellent strength-to-weight, heat treatable, standard for roll cages and hydraulic" },
+        { grade: "4130 Seamless", why: "Lower carbon than 4140 — better weldability, slightly less strength, preferred for aircraft and welded structures" },
       ]},
     ],
   },
@@ -231,16 +266,17 @@ const PSC_DATA = [
     id: "tube-pipe",
     category: "Carbon Steel Tube",
     type: "Pipe",
-    grades: ["Welded","Seamless"],
+    grades: ["A53 Welded","A53 Seamless","A106 Seamless"],
     sizes: "1/4\" IPS through 30\" IPS",
     finishes: ["Standard"],
-    notes: "",
+    notes: "A53 covers both welded and seamless pipe. A106 is seamless only and rated for higher temperature service. Both available in standard wall (Sch. 40) and extra strong (Sch. 80).",
     uses: [
       { label: "Fluid transfer, plumbing, general piping", grades: [
-        { grade: "Welded", why: "Economical — weld seam is fine for low-pressure fluid transfer and general structural pipe applications" },
+        { grade: "A53 Welded", why: "Economical — weld seam is fine for low-pressure fluid transfer and general structural pipe applications" },
+        { grade: "A53 Seamless", why: "No weld seam — better for higher pressure applications while still being economical for general service" },
       ]},
-      { label: "High pressure / critical service", grades: [
-        { grade: "Seamless", why: "No weld seam — uniform wall thickness and strength throughout, required for high pressure and critical applications" },
+      { label: "High pressure / high temperature service", grades: [
+        { grade: "A106 Seamless", why: "Rated for high temperature and high pressure service — required for steam lines, process piping, and critical fluid systems" },
       ]},
     ],
   },
@@ -340,11 +376,14 @@ const PSC_DATA = [
     id: "ss-flats",
     category: "Stainless Steel",
     type: "Flats",
-    grades: ["304","304 True Bar"],
+    grades: ["303","304","304 True Bar"],
     sizes: "1/8\"–1-1/4\" thick × 1/2\"–8\" wide",
     finishes: ["Cold Drawn"],
     notes: "304 'True Bar' for tight tolerance flat bar applications.",
     uses: [
+      { label: "High volume machined flat components", grades: [
+        { grade: "303", why: "Free machining stainless — best machinability of flat bar grades, preferred for high volume turned or milled parts" },
+      ]},
       { label: "Brackets, frames, fabrication", grades: [
         { grade: "304", why: "Weldable, corrosion resistant, good strength — standard for structural stainless fabrication" },
       ]},
@@ -371,13 +410,16 @@ const PSC_DATA = [
     id: "ss-tube",
     category: "Stainless Steel",
     type: "Tubing & Pipe",
-    grades: ["304"],
+    grades: ["304","316"],
     sizes: "Round: 1/4\" OD×.035\" wall – 1-1/2\" OD×.120\" wall. Square/Rect tubing. Pipe: 1/4\" IPS Sch.40 – 6\" IPS Sch.40",
     finishes: ["Mill","180 Grit Polished"],
     notes: "Polished finish available for aesthetic/sanitary applications.",
     uses: [
       { label: "Food/beverage, pharmaceutical, sanitary systems", grades: [
         { grade: "304", why: "Non-reactive, easy to sterilize, smooth bore prevents bacteria harboring — meets FDA/3A sanitary standards" },
+      ]},
+      { label: "Marine, chemical, high chloride environments", grades: [
+        { grade: "316", why: "Molybdenum addition gives significantly better chloride and acid resistance than 304 — required for marine and chemical service" },
       ]},
       { label: "Architectural / decorative", grades: [
         { grade: "304", why: "180 grit polished finish provides clean aesthetic appearance for visible architectural applications" },
@@ -390,8 +432,8 @@ const PSC_DATA = [
     type: "Sheet",
     grades: ["304"],
     sizes: "24 GA through 1/4\"",
-    finishes: ["Mill Finish","#4 Polished (one side)","Mirror finish (quote)"],
-    notes: "Mirror finish available on request.",
+    finishes: ["#2 Mill Finish","#4 Polished (one side)","Mirror finish (quote)"],
+    notes: "#2 is the standard mill finish. #4 brushed is the most common polished finish. Mirror finish available on request.",
     uses: [
       { label: "Fabrication, enclosures, food equipment", grades: [
         { grade: "304", why: "Corrosion resistant, cleanable surface, good formability — standard for food service and industrial enclosures" },
@@ -415,6 +457,21 @@ const PSC_DATA = [
       ]},
       { label: "Aerospace, marine, automotive components", grades: [
         { grade: "6061-T6", why: "T6 temper provides 40 ksi yield strength at 1/3 the weight of steel — excellent strength-to-weight ratio" },
+      ]},
+    ],
+  },
+  {
+    id: "al-7075-rounds",
+    category: "Aluminum",
+    type: "7075 Rounds",
+    grades: ["7075-T6","7075-T651"],
+    sizes: "Standard round bar sizes",
+    finishes: ["Extruded"],
+    notes: "Highest strength common aluminum alloy. Not as weldable as 6061. Best for machined high-strength parts.",
+    uses: [
+      { label: "High strength aerospace / defense / structural", grades: [
+        { grade: "7075-T6", why: "73 ksi yield strength — highest strength of common aluminum alloys, used where 6061 isn't strong enough" },
+        { grade: "7075-T651", why: "Stress relieved plate/bar — better dimensional stability during heavy machining, standard for aerospace structural parts" },
       ]},
     ],
   },
@@ -515,20 +572,6 @@ const PSC_DATA = [
       ]},
       { label: "Floor plate, walkways, anti-slip", grades: [
         { grade: "Tread Plate", why: "Raised pattern provides traction — lighter than steel tread plate, won't rust, standard for aluminum truck bodies" },
-      ]},
-    ],
-  },
-  {
-    id: "al-2011",
-    category: "Aluminum",
-    type: "2011-T3 Cold Finished Bars",
-    grades: ["2011-T3"],
-    sizes: "1/4\" through 3\" diameter",
-    finishes: ["Cold Drawn"],
-    notes: "RoHS Compliant. Highest machinability of any aluminum alloy.",
-    uses: [
-      { label: "Screw machine parts, high-speed CNC, precision components", grades: [
-        { grade: "2011-T3", why: "Copper-bismuth alloy — machines faster and cleaner than 6061, the aluminum equivalent of 12L14, RoHS compliant" },
       ]},
     ],
   },
@@ -737,6 +780,23 @@ const PSC_DATA = [
       ]},
     ],
   },
+  {
+    id: "copper-brass-sheet",
+    category: "Specialty Products",
+    type: "Copper & Brass Sheet / Plate",
+    grades: ["Brass","Copper"],
+    sizes: "Standard sheet and plate sizes — contact branch for availability",
+    finishes: ["Mill"],
+    notes: "Available in sheet and plate form. Contact your branch to confirm current stock and sizes.",
+    uses: [
+      { label: "Electrical applications", grades: [
+        { grade: "Copper", why: "Highest electrical conductivity of any common metal — standard for bus bars, electrical sheet, and conductive components" },
+      ]},
+      { label: "Decorative, architectural, machined parts", grades: [
+        { grade: "Brass", why: "Attractive gold appearance, excellent machinability, good corrosion resistance — used for decorative panels, nameplates, and machined parts" },
+      ]},
+    ],
+  },
 ];
 
 const PSC_SERVICES = [
@@ -816,15 +876,11 @@ const GLOSSARY = [
   { term: "DOM", category: "Abbreviations", definition: "Drawn Over Mandrel. Tube that starts as ERW (welded) then is cold drawn over a mandrel — this irons out the weld seam and produces extremely tight ID and OD tolerances with a smooth bore. The standard for hydraulic cylinder applications." },
   { term: "ERW", category: "Abbreviations", definition: "Electric Resistance Welded. Tube formed from flat strip, rolled into shape, and welded along the seam using electric current. Economical, good dimensional consistency. Fine for structural use but weld seam makes it unsuitable for high-pressure applications." },
   { term: "HF Seamless", category: "Abbreviations", definition: "Hot Finished Seamless. Tube produced without a weld seam by piercing a solid billet — finished at elevated temperature. No seam means uniform strength in all directions. Used for pressure applications and large diameter tubing." },
-  { term: "CD Seamless", category: "Abbreviations", definition: "Cold Drawn Seamless. Seamless tube that has been cold drawn to tighter tolerances and better surface finish than hot finished. Best combination of no weld seam plus tight dimensions." },
   { term: "DCF", category: "Abbreviations", definition: "Drawn, Case Free (or DeCarb Free). A cold finished product that has been processed to eliminate the decarburized layer on the surface. Critical for tool steel and alloy applications where surface carbon content affects heat treat results." },
   { term: "IPS", category: "Abbreviations", definition: "Iron Pipe Size. The nominal sizing system for pipe — a 2\" IPS pipe doesn't actually measure 2\" OD. It's a legacy system where the number refers to the approximate inside diameter of older pipes. Always clarify OD and wall when ordering pipe." },
   { term: "OD", category: "Abbreviations", definition: "Outside Diameter. The measurement across the outside of a round or tube. For tubing and pipe, always get both OD and wall thickness — or OD and ID — to define the part completely." },
   { term: "ID", category: "Abbreviations", definition: "Inside Diameter. The measurement of the bore/hole of a tube or pipe. ID = OD minus (2 × wall thickness). Critical for fluid flow and mechanical fit applications." },
   { term: "OAL", category: "Abbreviations", definition: "Overall Length. The total cut length of a piece. When a customer gives you OAL they want material cut to that exact finished length." },
-  { term: "HRC", category: "Abbreviations", definition: "Hardness Rockwell C Scale. The standard hardness measurement for hardened steel. Higher number = harder. Typical ranges: annealed tool steel 20-25 HRC, pre-hardened P20 28-32 HRC, hardened D2 die steel 58-62 HRC, hardened HSS 62-65 HRC." },
-  { term: "HRB", category: "Abbreviations", definition: "Hardness Rockwell B Scale. Used for softer materials — annealed steel, aluminum, brass. When material is too soft for the C scale. 100 HRB ≈ 22 HRC." },
-  { term: "BHN / BRN", category: "Abbreviations", definition: "Brinell Hardness Number. Another hardness scale — used commonly for abrasion resistant plate (400 BHN, 500 BHN). Larger indenter than Rockwell, better for coarser materials." },
   { term: "HSLA", category: "Abbreviations", definition: "High Strength Low Alloy. Steel with small amounts of alloying elements (niobium, vanadium, titanium) that boost strength without requiring heat treatment. Higher yield than standard carbon steel, better weldability than heat treated alloy steel." },
   { term: "ASTM", category: "Abbreviations", definition: "American Society for Testing and Materials. The organization that writes the material specifications (A36, A500, A513, etc.) that define minimum mechanical properties, chemistry, and testing requirements. When a customer asks for 'ASTM certified' they want material tested to that spec." },
   { term: "AMS", category: "Abbreviations", definition: "Aerospace Material Specification. Higher-tier spec than ASTM — tighter chemistry, tighter testing, full traceability required. When you see AMS on an order (like 4340 AMS6415) it's aerospace or defense and paperwork is critical." },
@@ -835,7 +891,6 @@ const GLOSSARY = [
   { term: "RFQ", category: "Documents & Orders", definition: "Request for Quote. When a customer sends an RFQ they want pricing — not an order, just a price. Respond fast. Speed on an RFQ is one of the biggest competitive advantages in this business." },
   { term: "PO", category: "Documents & Orders", definition: "Purchase Order. The formal document a customer issues when they're actually buying. Don't ship without a PO number. The PO is the contract." },
   { term: "Blanket Order", category: "Documents & Orders", definition: "A standing order for a set quantity over a period of time, released in smaller shipments. Customer commits to buying X tons over 6 months, you commit to holding the inventory. Good for locking in price and securing volume." },
-  { term: "Stocking Program", category: "Documents & Orders", definition: "PSC holds agreed-upon inventory of specific sizes and grades for a customer at all times. Customer gets guaranteed availability, PSC gets committed volume. One of PSC's core service offerings." },
   { term: "Saw Cutting", category: "Processing", definition: "Cutting bar, tube, or plate to a specific length using a band saw or cold saw. PSC offers both single-piece cutting and precision production cutting (high volume, tight length tolerance). A major value-add over buying from a mill." },
   { term: "Band Saw", category: "Processing", definition: "Uses a continuous toothed blade — good for general cutting across most materials. Slightly rougher cut than cold saw but handles a wider range of sizes and materials." },
   { term: "Cold Saw", category: "Processing", definition: "Uses a circular blade at slow speed — produces a very clean, burr-free, square cut with tight length tolerance. Preferred for precision production cutting where finish and squareness matter." },
@@ -854,6 +909,7 @@ const GLOSSARY = [
   { term: "Machinability", category: "Metallurgy", definition: "How easily a material can be cut, drilled, and machined. Rated as a percentage vs 1212 free machining steel (100%). 12L14 rates around 170% — cuts faster and cleaner than the baseline. 4140 HT rates around 55% — much harder to machine." },
   { term: "Tensile Strength", category: "Metallurgy", definition: "The maximum stress a material can withstand before breaking — measured in PSI or KSI. 1018 cold drawn: ~70 KSI. 4140 HT: ~150 KSI. 4340 HT: ~180+ KSI. Higher tensile = stronger but usually harder to machine." },
   { term: "Yield Strength", category: "Metallurgy", definition: "The stress at which a material starts to permanently deform. A36 structural: 36 KSI yield. 4140 HT: ~130 KSI yield. Important number when a customer asks about load capacity." },
+  { term: "Elongation", category: "Metallurgy", definition: "How much a material can stretch before breaking — expressed as a percentage. High elongation means ductile, the material can bend and form without cracking. Low elongation means brittle. A material with 2% elongation will crack where one with 20% elongation won't. Important when a customer is forming, bending, or drawing the material." },
   { term: "Decarburization / DeCarb", category: "Metallurgy", definition: "The loss of carbon from the surface of steel during hot rolling or heat treatment — creates a soft skin on an otherwise hard material. DeCarb-free stock has had this layer removed. Critical for tool steel where surface hardness is required right to the OD." },
   { term: "Mill Scale", category: "Metallurgy", definition: "The blue-black oxide layer that forms on steel during hot rolling. Rough, hard, not weldable until removed. Hot rolled material has it. P&O, cold finished, and machined material has it removed." },
   { term: "Tolerance", category: "Dimensions & Tolerances", definition: "The allowable variation from a specified dimension. Cold finished stock holds tighter tolerances than hot rolled. TGP holds tighter than cold drawn." },
@@ -878,15 +934,15 @@ const GAUGE_DATA = [
   { fraction: "—",        gauge: "11",  decimal: ".120" },
   { fraction: "—",        gauge: "12",  decimal: ".105" },
   { fraction: "—",        gauge: "13",  decimal: ".090" },
-  { fraction: "—",        gauge: "14",  decimal: ".075" },
-  { fraction: "—",        gauge: "15",  decimal: ".067" },
-  { fraction: "1/16\"",   gauge: "16",  decimal: ".060" },
-  { fraction: "—",        gauge: "17",  decimal: ".054" },
-  { fraction: "—",        gauge: "18",  decimal: ".048" },
+  { fraction: "—",        gauge: "14",  decimal: ".083" },
+  { fraction: "—",        gauge: "15",  decimal: ".072" },
+  { fraction: "1/16\"",   gauge: "16",  decimal: ".065" },
+  { fraction: "—",        gauge: "17",  decimal: ".058" },
+  { fraction: "—",        gauge: "18",  decimal: ".049" },
   { fraction: "—",        gauge: "19",  decimal: ".042" },
-  { fraction: "—",        gauge: "20",  decimal: ".036" },
-  { fraction: "—",        gauge: "21",  decimal: ".033" },
-  { fraction: "—",        gauge: "22",  decimal: ".030" },
+  { fraction: "—",        gauge: "20",  decimal: ".035" },
+  { fraction: "—",        gauge: "21",  decimal: ".032" },
+  { fraction: "—",        gauge: "22",  decimal: ".028" },
   { fraction: "—",        gauge: "24",  decimal: ".024" },
   { fraction: "—",        gauge: "26",  decimal: ".018" },
   { fraction: "—",        gauge: "28",  decimal: ".015" },
@@ -1094,6 +1150,210 @@ const GlossaryCard = ({ item }) => {
   );
 };
 
+const DENSITIES = {
+  carbon:    0.2836,
+  aluminum:  0.0975,
+  stainless: 0.2890,
+};
+
+const SHAPES = [
+  { key: "round",    label: "Round Bar",        fields: ["diameter", "length"] },
+  { key: "square",   label: "Square Bar",        fields: ["width", "length"] },
+  { key: "flat",     label: "Flat Bar",          fields: ["width", "thickness", "length"] },
+  { key: "hex",      label: "Hex Bar",           fields: ["across_flats", "length"] },
+  { key: "tube",     label: "Round Tube / Pipe", fields: ["od", "wall", "length"] },
+  { key: "rect",     label: "Rect / Sq Tube",    fields: ["od_width", "od_height", "wall", "length"] },
+  { key: "plate",    label: "Sheet / Plate",     fields: ["width", "thickness", "length"] },
+];
+
+const FIELD_LABELS = {
+  diameter:    { label: "Diameter", unit: "in" },
+  length:      { label: "Length",   unit: "in" },
+  width:       { label: "Width",    unit: "in" },
+  thickness:   { label: "Thickness",unit: "in" },
+  across_flats:{ label: "Across Flats", unit: "in" },
+  od:          { label: "OD",       unit: "in" },
+  wall:        { label: "Wall",     unit: "in" },
+  od_width:    { label: "OD Width", unit: "in" },
+  od_height:   { label: "OD Height",unit: "in" },
+};
+
+function calcWeight(shape, material, vals) {
+  const d = DENSITIES[material];
+  const v = (k) => parseFloat(vals[k]) || 0;
+  let volume = 0;
+
+  if (shape === "round") {
+    const r = v("diameter") / 2;
+    volume = Math.PI * r * r * v("length");
+  } else if (shape === "square") {
+    volume = v("width") * v("width") * v("length");
+  } else if (shape === "flat" || shape === "plate") {
+    volume = v("width") * v("thickness") * v("length");
+  } else if (shape === "hex") {
+    // area of regular hexagon from across-flats = (3√3/2) * (af/2)^2 * (2/√3)^2 simplified:
+    // area = (√3/2) * af^2 / (√3) * (√3) => standard: area = (3√3/2) * s^2 where s = af/√3
+    const af = v("across_flats");
+    const area = (Math.sqrt(3) / 2) * af * af;
+    volume = area * v("length");
+  } else if (shape === "tube") {
+    const ro = v("od") / 2;
+    const ri = ro - v("wall");
+    volume = Math.PI * (ro * ro - ri * ri) * v("length");
+  } else if (shape === "rect") {
+    const ow = v("od_width");
+    const oh = v("od_height");
+    const w = v("wall");
+    const iw = ow - 2 * w;
+    const ih = oh - 2 * w;
+    volume = (ow * oh - iw * ih) * v("length");
+  }
+
+  return volume * d;
+}
+
+function WeightCalculator() {
+  const [material, setMaterial] = useState("carbon");
+  const [shape, setShape] = useState("round");
+  const [vals, setVals] = useState({});
+  const [qty, setQty] = useState("1");
+
+  const currentShape = SHAPES.find(s => s.key === shape);
+  const weightEa = calcWeight(shape, material, vals);
+  const totalWeight = weightEa * (parseFloat(qty) || 1);
+  const hasResult = weightEa > 0;
+
+  const inputStyle = {
+    width: "100%", background: "rgba(255,255,255,0.04)",
+    border: "1px solid rgba(74,144,217,0.2)", borderRadius: "6px",
+    padding: "10px 12px", color: "#e8edf5",
+    fontSize: "15px", fontFamily: "'IBM Plex Mono', monospace",
+    outline: "none", boxSizing: "border-box",
+  };
+
+  const labelStyle = {
+    fontSize: "10px", color: "#5a6e90", letterSpacing: "1.5px",
+    textTransform: "uppercase", marginBottom: "6px",
+    fontFamily: "'IBM Plex Mono', monospace", display: "block",
+  };
+
+  return (
+    <div style={{ maxWidth: "600px", margin: "0 auto", padding: "16px" }}>
+      <div style={{ fontSize: "11px", color: "#3a4a6a", fontFamily: "'IBM Plex Mono', monospace", marginBottom: "16px", letterSpacing: "1px" }}>
+        WEIGHT CALCULATOR — LBS PER PIECE
+      </div>
+
+      {/* Material selector */}
+      <div style={{ marginBottom: "16px" }}>
+        <span style={labelStyle}>Material</span>
+        <div style={{ display: "flex", gap: "6px" }}>
+          {[["carbon","Carbon Steel"],["aluminum","Aluminum"],["stainless","Stainless"]].map(([key, label]) => (
+            <button key={key} onClick={() => setMaterial(key)} style={{
+              flex: 1, padding: "9px 4px", borderRadius: "6px", cursor: "pointer",
+              border: "1px solid", fontSize: "12px", fontFamily: "'IBM Plex Mono', monospace",
+              fontWeight: "600", transition: "all 0.15s",
+              background: material === key ? "#4a90d9" : "transparent",
+              borderColor: material === key ? "#4a90d9" : "rgba(255,255,255,0.12)",
+              color: material === key ? "#ffffff" : "#5a6e90",
+            }}>{label}</button>
+          ))}
+        </div>
+      </div>
+
+      {/* Shape selector */}
+      <div style={{ marginBottom: "16px" }}>
+        <span style={labelStyle}>Shape</span>
+        <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
+          {SHAPES.map(s => (
+            <button key={s.key} onClick={() => { setShape(s.key); setVals({}); }} style={{
+              padding: "7px 12px", borderRadius: "6px", cursor: "pointer",
+              border: "1px solid", fontSize: "11px", fontFamily: "'IBM Plex Mono', monospace",
+              fontWeight: "600", transition: "all 0.15s", marginBottom: "4px",
+              background: shape === s.key ? "#4a90d9" : "transparent",
+              borderColor: shape === s.key ? "#4a90d9" : "rgba(255,255,255,0.12)",
+              color: shape === s.key ? "#ffffff" : "#5a6e90",
+            }}>{s.label}</button>
+          ))}
+        </div>
+      </div>
+
+      {/* Dimension inputs */}
+      <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "8px", padding: "16px", marginBottom: "16px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: currentShape.fields.length >= 3 ? "1fr 1fr" : "1fr 1fr", gap: "12px" }}>
+          {currentShape.fields.map(field => (
+            <div key={field}>
+              <span style={labelStyle}>{FIELD_LABELS[field].label} ({FIELD_LABELS[field].unit})</span>
+              <input
+                type="number"
+                min="0"
+                step="any"
+                placeholder="0.000"
+                value={vals[field] || ""}
+                onChange={e => setVals(v => ({ ...v, [field]: e.target.value }))}
+                style={inputStyle}
+                onFocus={e => e.target.style.borderColor = "#4a90d9"}
+                onBlur={e => e.target.style.borderColor = "rgba(74,144,217,0.2)"}
+              />
+            </div>
+          ))}
+          <div>
+            <span style={labelStyle}>Quantity (pcs)</span>
+            <input
+              type="number"
+              min="1"
+              step="1"
+              placeholder="1"
+              value={qty}
+              onChange={e => setQty(e.target.value)}
+              style={inputStyle}
+              onFocus={e => e.target.style.borderColor = "#4a90d9"}
+              onBlur={e => e.target.style.borderColor = "rgba(74,144,217,0.2)"}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Result */}
+      <div style={{
+        background: hasResult ? "rgba(74,144,217,0.12)" : "rgba(255,255,255,0.02)",
+        border: `1px solid ${hasResult ? "rgba(74,144,217,0.4)" : "rgba(255,255,255,0.06)"}`,
+        borderRadius: "8px", padding: "20px 16px", textAlign: "center", transition: "all 0.2s",
+      }}>
+        {hasResult ? (
+          <>
+            <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", color: "#4a90d9", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "8px" }}>Result</div>
+            <div style={{ display: "flex", justifyContent: "space-around", gap: "16px" }}>
+              <div>
+                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "28px", fontWeight: "700", color: "#ffffff" }}>{weightEa.toFixed(2)}</div>
+                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", color: "#5a6e90", letterSpacing: "1px", marginTop: "4px" }}>LBS / PIECE</div>
+              </div>
+              {(parseFloat(qty) || 1) > 1 && (
+                <div>
+                  <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "28px", fontWeight: "700", color: "#7eb8f7" }}>{totalWeight.toFixed(2)}</div>
+                  <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", color: "#5a6e90", letterSpacing: "1px", marginTop: "4px" }}>LBS TOTAL</div>
+                </div>
+              )}
+            </div>
+            <div style={{ fontFamily: "'IBM Plex Sans', sans-serif", fontSize: "11px", color: "#5a6e90", marginTop: "12px" }}>
+              {(totalWeight / 2000).toFixed(3)} tons
+            </div>
+          </>
+        ) : (
+          <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "12px", color: "#3a4a6a", letterSpacing: "1px" }}>
+            ENTER DIMENSIONS TO CALCULATE
+          </div>
+        )}
+      </div>
+
+      <div style={{ marginTop: "12px", padding: "10px 12px", background: "rgba(74,144,217,0.08)", borderLeft: "3px solid #4a90d9", borderRadius: "0 4px 4px 0" }}>
+        <div style={{ fontSize: "12px", color: "#cdd8f0", fontFamily: "'IBM Plex Sans', sans-serif", lineHeight: "1.6" }}>
+          All dimensions in inches. Carbon steel: 0.2836 lb/in³ · Aluminum: 0.0975 lb/in³ · Stainless: 0.2890 lb/in³
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function PSCFieldApp() {
   const [tab, setTab] = useState("products");
   const [search, setSearch] = useState("");
@@ -1120,11 +1380,13 @@ export default function PSCFieldApp() {
 
   const filteredGlossary = useMemo(() => {
     const q = glossarySearch.toLowerCase().trim();
-    return GLOSSARY.filter(item => {
-      const matchCat = glossaryCategory === "All" || item.category === glossaryCategory;
-      if (!q) return matchCat;
-      return matchCat && (item.term.toLowerCase().includes(q) || item.definition.toLowerCase().includes(q));
-    });
+    return GLOSSARY
+      .filter(item => {
+        const matchCat = glossaryCategory === "All" || item.category === glossaryCategory;
+        if (!q) return matchCat;
+        return matchCat && (item.term.toLowerCase().includes(q) || item.definition.toLowerCase().includes(q));
+      })
+      .sort((a, b) => a.term.localeCompare(b.term));
   }, [glossarySearch, glossaryCategory]);
 
   const TABS = [
@@ -1132,6 +1394,7 @@ export default function PSCFieldApp() {
     { key: "services", label: "Services" },
     { key: "glossary", label: "Glossary" },
     { key: "gauge", label: "Gauge" },
+    { key: "weight", label: "Weight" },
   ];
 
   return (
@@ -1326,6 +1589,8 @@ export default function PSCFieldApp() {
         </div>
       )}
 
+      {/* WEIGHT CALCULATOR TAB */}
+      {tab === "weight" && <WeightCalculator />}
 
       <div style={{ textAlign: "center", padding: "24px 16px", borderTop: "1px solid rgba(255,255,255,0.05)", fontSize: "10px", color: "#3a4a6a", fontFamily: "'IBM Plex Mono', monospace", letterSpacing: "1px" }}>
         PENNSYLVANIA STEEL COMPANY · PASTEEL.COM
